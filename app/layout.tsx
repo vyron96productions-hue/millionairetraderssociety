@@ -4,7 +4,7 @@ import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
+const GTM_ID = 'GTM-MD2ZC44H'
 
 export const metadata: Metadata = {
   title: { default: 'Millionaire Traders Society', template: '%s | Millionaire Traders Society' },
