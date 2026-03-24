@@ -1,6 +1,7 @@
 'use client'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { pushDataLayer } from '@/lib/gtm'
 
 const COURSES = [
@@ -28,14 +29,8 @@ export default function Nav() {
       <nav style={{ background: '#fff', borderBottom: '1px solid #e2e8f0', position: 'sticky', top: 0, zIndex: 50, boxShadow: '0 1px 8px rgba(0,0,0,0.06)' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
 
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }} onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Logo', destination: '/', page_section: 'nav' })}>
-            <div style={{ width: 38, height: 38, borderRadius: '50%', background: 'linear-gradient(135deg, #0DBEF3, #289E54)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-              <span style={{ color: '#fff', fontWeight: 900, fontSize: 16 }}>M</span>
-            </div>
-            <div>
-              <div style={{ fontSize: 14, fontWeight: 900, color: 'var(--dark)', lineHeight: 1.1 }}>MILLIONAIRE</div>
-              <div style={{ fontSize: 10, fontWeight: 600, color: 'var(--cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', lineHeight: 1 }}>Traders Society</div>
-            </div>
+          <Link href="/" style={{ textDecoration: 'none', flexShrink: 0 }} onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Logo', destination: '/', page_section: 'nav' })}>
+            <Image src="/mts-logo.png" alt="Millionaire Traders Society" width={200} height={52} style={{ height: 44, width: 'auto', display: 'block' }} priority />
           </Link>
 
           {/* Desktop links */}
@@ -79,12 +74,7 @@ export default function Nav() {
           <div onClick={() => setMenuOpen(false)} style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.5)' }} />
           <div style={{ position: 'absolute', top: 0, left: 0, background: '#fff', width: 300, height: '100%', padding: 24, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 4 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(135deg, #0DBEF3, #289E54)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#fff', fontWeight: 900, fontSize: 14 }}>M</span>
-                </div>
-                <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--dark)' }}>MTS</span>
-              </div>
+              <Image src="/mts-logo.png" alt="Millionaire Traders Society" width={160} height={42} style={{ height: 36, width: 'auto' }} />
               <button onClick={() => setMenuOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#64748b' }}>
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" /></svg>
               </button>

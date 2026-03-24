@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import TrackedLink from '@/components/TrackedLink'
 import TrackedAnchor from '@/components/TrackedAnchor'
 import type { Metadata } from 'next'
@@ -30,6 +31,7 @@ const COURSES = [
     href: '/free-course',
     accent: '#0DBEF3',
     highlight: false,
+    image: '/course-free.jpg',
   },
   {
     id: 'vip',
@@ -54,6 +56,7 @@ const COURSES = [
     href: 'https://millionairetraderssociety.com',
     accent: '#0DBEF3',
     highlight: true,
+    image: '/course-vip.jpg',
   },
   {
     id: 'workshop',
@@ -77,6 +80,7 @@ const COURSES = [
     href: 'https://millionairetraderssociety.com',
     accent: '#289E54',
     highlight: false,
+    image: '/course-60day.png',
   },
   {
     id: 'bundle',
@@ -101,6 +105,7 @@ const COURSES = [
     href: 'https://millionairetraderssociety.com',
     accent: '#289E54',
     highlight: false,
+    image: '/course-bundle.png',
   },
 ]
 
@@ -128,6 +133,9 @@ export default function CoursesPage() {
                     ★ Most Popular
                   </div>
                 )}
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
+                  <Image src={c.image} alt={c.title} width={280} height={240} style={{ height: 200, width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 6px 18px rgba(0,0,0,0.12))' }} />
+                </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
                   <span style={{ background: c.badgeBg, color: c.badgeColor, fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 50, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{c.badge}</span>
                   <div style={{ textAlign: 'right' }}>

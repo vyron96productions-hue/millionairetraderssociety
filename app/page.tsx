@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import TrackedLink from '@/components/TrackedLink'
 import TrackedAnchor from '@/components/TrackedAnchor'
 import type { Metadata } from 'next'
@@ -27,6 +28,7 @@ const COURSES = [
     href: '/free-course',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
+    image: '/course-free.jpg',
   },
   {
     badge: 'POPULAR',
@@ -39,6 +41,7 @@ const COURSES = [
     href: '/courses#vip',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
+    image: '/course-vip.jpg',
   },
   {
     badge: 'BEST VALUE',
@@ -51,6 +54,7 @@ const COURSES = [
     href: '/courses#bundle',
     accent: '#289E54',
     bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)',
+    image: '/course-bundle.png',
   },
 ]
 
@@ -154,7 +158,10 @@ export default function HomePage() {
           </div>
           <div className="courses-grid">
             {COURSES.map(c => (
-              <div key={c.title} style={{ background: c.bg, borderRadius: 24, padding: '36px 28px', display: 'flex', flexDirection: 'column', border: `1px solid ${c.accent}22` }}>
+              <div key={c.title} style={{ background: c.bg, borderRadius: 24, padding: '28px 28px 36px', display: 'flex', flexDirection: 'column', border: `1px solid ${c.accent}22` }}>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
+                  <Image src={c.image} alt={c.title} width={220} height={220} style={{ height: 180, width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.15))' }} />
+                </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
                   <span className={`badge ${c.badgeClass}`}>{c.badge}</span>
                   <span style={{ fontSize: 12, color: 'var(--gray)', fontWeight: 600 }}>{c.subtitle}</span>
@@ -215,18 +222,23 @@ export default function HomePage() {
                 <TrackedAnchor href="https://www.youtube.com/@SayYes2Jess" target="_blank" rel="noopener noreferrer" className="btn-outline" tracking={{ event: 'social_click', platform: 'YouTube', destination: 'https://www.youtube.com/@SayYes2Jess', page_section: 'about_section' }}>Watch on YouTube</TrackedAnchor>
               </div>
             </div>
-            <div style={{ background: 'linear-gradient(135deg, #0DBEF3, #289E54)', borderRadius: 24, padding: '48px 40px', color: '#fff', display: 'flex', flexDirection: 'column', gap: 28 }}>
-              {[
-                { label: 'Students Taught', value: '17,000+' },
-                { label: 'Years Teaching', value: '3+' },
-                { label: 'Markets Covered', value: 'Forex · Futures · Options · Crypto' },
-                { label: 'YouTube Community', value: '@SayYes2Jess' },
-              ].map(stat => (
-                <div key={stat.label} style={{ borderBottom: '1px solid rgba(255,255,255,0.15)', paddingBottom: 20 }}>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.65)', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{stat.label}</div>
-                  <div style={{ fontSize: 22, fontWeight: 900 }}>{stat.value}</div>
-                </div>
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+              <div style={{ borderRadius: 24, overflow: 'hidden', position: 'relative' }}>
+                <Image src="/coach-jess.png" alt="Coach Jessica Ramos" width={600} height={700} style={{ width: '100%', height: 420, objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+              </div>
+              <div style={{ background: 'linear-gradient(135deg, #0DBEF3, #289E54)', borderRadius: 20, padding: '28px 32px', color: '#fff', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                {[
+                  { label: 'Students', value: '17,000+' },
+                  { label: 'Years Teaching', value: '3+' },
+                  { label: 'Markets', value: '5+' },
+                  { label: 'Community', value: '@SayYes2Jess' },
+                ].map(stat => (
+                  <div key={stat.label}>
+                    <div style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.65)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 4 }}>{stat.label}</div>
+                    <div style={{ fontSize: 18, fontWeight: 900 }}>{stat.value}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

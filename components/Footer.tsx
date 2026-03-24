@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { pushDataLayer } from '@/lib/gtm'
 
 const COURSES = [
@@ -50,14 +51,8 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'linear-gradient(135deg, #0DBEF3, #289E54)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <span style={{ color: '#fff', fontWeight: 900, fontSize: 18 }}>M</span>
-              </div>
-              <div>
-                <div style={{ fontSize: 14, fontWeight: 900, lineHeight: 1.1 }}>MILLIONAIRE</div>
-                <div style={{ fontSize: 10, fontWeight: 600, color: '#0DBEF3', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Traders Society</div>
-              </div>
+            <div style={{ marginBottom: 16 }}>
+              <Image src="/mts-logo.png" alt="Millionaire Traders Society" width={180} height={48} style={{ height: 40, width: 'auto', filter: 'brightness(0) invert(1)' }} />
             </div>
             <p style={{ fontSize: 14, color: '#94a3b8', lineHeight: 1.7, marginBottom: 20, maxWidth: 280 }}>
               Empowering everyday people to achieve financial freedom through proven trading education. Over 17,000 students and counting.

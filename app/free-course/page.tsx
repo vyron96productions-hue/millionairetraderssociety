@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import TrackedLink from '@/components/TrackedLink'
 import TrackedAnchor from '@/components/TrackedAnchor'
 import type { Metadata } from 'next'
@@ -51,6 +52,9 @@ export default function FreeCourse() {
             </div>
 
             <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: '36px 28px' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
+                <Image src="/course-free.jpg" alt="Beginners Trading Course" width={280} height={280} style={{ height: 220, width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 8px 24px rgba(13,190,243,0.3))' }} />
+              </div>
               <h3 style={{ fontSize: 17, fontWeight: 800, marginBottom: 20 }}>What You&apos;ll Get</h3>
               {[
                 { icon: '📊', text: '6 structured learning modules' },

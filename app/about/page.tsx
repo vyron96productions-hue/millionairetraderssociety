@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import TrackedLink from '@/components/TrackedLink'
 import TrackedAnchor from '@/components/TrackedAnchor'
 import type { Metadata } from 'next'
@@ -51,6 +52,10 @@ export default function AboutPage() {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+              {/* Photo */}
+              <div style={{ borderRadius: 24, overflow: 'hidden' }}>
+                <Image src="/coach-jess.png" alt="Coach Jessica Ramos" width={600} height={700} style={{ width: '100%', height: 460, objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+              </div>
               {/* Stats card */}
               <div style={{ background: 'linear-gradient(135deg, #0DBEF3, #289E54)', borderRadius: 20, padding: '36px 32px', color: '#fff' }}>
                 <h3 style={{ fontSize: 18, fontWeight: 800, marginBottom: 24 }}>By the Numbers</h3>
