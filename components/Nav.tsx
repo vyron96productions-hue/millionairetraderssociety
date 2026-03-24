@@ -28,10 +28,10 @@ export default function Nav() {
   return (
     <>
       <nav style={{ background: '#fff', borderBottom: '1px solid #e2e8f0', position: 'sticky', top: 0, zIndex: 50, boxShadow: '0 1px 8px rgba(0,0,0,0.06)' }}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 84 }}>
 
           <Link href="/" style={{ textDecoration: 'none', flexShrink: 0 }} onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Logo', destination: '/', page_section: 'nav' })}>
-            <Image src="/mts-logo.png" alt="Millionaire Traders Society" width={200} height={52} style={{ height: 44, width: 'auto', display: 'block' }} priority />
+            <Image src="/mts-logo.png" alt="Millionaire Traders Society" width={300} height={80} style={{ height: 64, width: 'auto', display: 'block' }} priority />
           </Link>
 
           {/* Desktop links */}
