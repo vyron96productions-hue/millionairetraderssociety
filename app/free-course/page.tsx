@@ -51,11 +51,11 @@ export default function FreeCourse() {
               </div>
             </div>
 
-            <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: '36px 28px' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24, background: '#fff', borderRadius: 16, padding: '16px' }}>
+            <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 24, padding: '36px 28px' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
                 <Image src="/course-free.jpg" alt="Beginners Trading Course" width={480} height={480} style={{ height: 'auto', width: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
               </div>
-              <h3 style={{ fontSize: 17, fontWeight: 800, marginBottom: 20 }}>What You&apos;ll Get</h3>
+              <h3 style={{ fontSize: 17, fontWeight: 800, color: 'var(--dark)', marginBottom: 20 }}>What You&apos;ll Get</h3>
               {[
                 { icon: '📊', text: '6 structured learning modules' },
                 { icon: '🎥', text: 'Video lessons with Coach Jess' },
@@ -64,7 +64,7 @@ export default function FreeCourse() {
                 { icon: '👥', text: 'Access to the MTS community' },
                 { icon: '⬆️', text: 'Easy upgrade path to VIP when ready' },
               ].map(i => (
-                <div key={i.text} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.07)', fontSize: 14, color: 'rgba(255,255,255,0.8)' }}>
+                <div key={i.text} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: '1px solid #f1f5f9', fontSize: 14, color: 'var(--dark)' }}>
                   <span style={{ fontSize: 20 }}>{i.icon}</span>
                   {i.text}
                 </div>

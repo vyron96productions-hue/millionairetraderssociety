@@ -53,11 +53,11 @@ export default function BundlePage() {
               </div>
             </div>
 
-            <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: '36px 28px' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24, background: '#fff', borderRadius: 16, padding: '16px' }}>
+            <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 24, padding: '36px 28px' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
                 <Image src="/course-bundle.png" alt="VIP Bundle" width={480} height={480} style={{ height: 'auto', width: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
               </div>
-              <h3 style={{ fontSize: 17, fontWeight: 800, marginBottom: 20 }}>Everything Included</h3>
+              <h3 style={{ fontSize: 17, fontWeight: 800, color: 'var(--dark)', marginBottom: 20 }}>Everything Included</h3>
               {[
                 { icon: '📈', text: 'VIP Trading Course' },
                 { icon: '📊', text: '60-Day Trader Workshop' },
@@ -66,7 +66,7 @@ export default function BundlePage() {
                 { icon: '👥', text: 'Private community chat' },
                 { icon: '⚡', text: 'Priority support' },
               ].map(i => (
-                <div key={i.text} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.07)', fontSize: 14, color: 'rgba(255,255,255,0.8)' }}>
+                <div key={i.text} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: '1px solid #f1f5f9', fontSize: 14, color: 'var(--dark)' }}>
                   <span style={{ fontSize: 20 }}>{i.icon}</span>
                   {i.text}
                 </div>

@@ -6,9 +6,10 @@ import { pushDataLayer } from '@/lib/gtm'
 
 const COURSES = [
   { label: 'Free Beginners Course', href: '/free-course' },
-  { label: 'VIP Trading Course', href: '/courses#vip' },
-  { label: '60-Day Trader Workshop', href: '/courses#workshop' },
-  { label: 'VIP Bundle', href: '/courses#bundle' },
+  { label: 'VIP Trading Course', href: '/vip-course' },
+  { label: '60-Day Trader Workshop', href: '/workshop' },
+  { label: 'VIP Bundle', href: '/bundle' },
+  { label: 'All Courses', href: '/courses' },
 ]
 
 export default function Nav() {
