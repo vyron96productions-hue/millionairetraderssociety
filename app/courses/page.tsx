@@ -10,8 +10,8 @@ const COURSES = [
   {
     id: 'free',
     badge: 'FREE',
-    badgeColor: '#289E54',
-    badgeBg: '#e8f5e9',
+    badgeColor: '#0a9ecc',
+    badgeBg: '#e0f7fe',
     title: 'Beginners Trading Course',
     price: 'Free',
     priceNote: 'A $500+ value — no credit card needed',
@@ -26,7 +26,7 @@ const COURSES = [
     ],
     cta: 'Get Free Access →',
     href: '/free-course',
-    accent: '#289E54',
+    accent: '#0DBEF3',
     highlight: false,
   },
   {
@@ -56,8 +56,8 @@ const COURSES = [
   {
     id: 'workshop',
     badge: 'STOCK OPTIONS',
-    badgeColor: '#0a9ecc',
-    badgeBg: '#e0f7fe',
+    badgeColor: '#289E54',
+    badgeBg: '#e8f5e9',
     title: '60-Day Trader Workshop',
     price: 'One-Time',
     priceNote: 'Stock options education program',
@@ -73,7 +73,7 @@ const COURSES = [
     ],
     cta: 'Join the Workshop →',
     href: 'https://millionairetraderssociety.com',
-    accent: '#0DBEF3',
+    accent: '#289E54',
     highlight: false,
   },
   {
