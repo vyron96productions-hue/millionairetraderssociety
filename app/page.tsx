@@ -173,7 +173,7 @@ export default function HomePage() {
             {COURSES.map(c => (
               <div key={c.title} style={{ background: c.bg, borderRadius: 24, padding: '28px 28px 36px', display: 'flex', flexDirection: 'column', border: `1px solid ${c.accent}22` }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
-                  <Image src={c.image} alt={c.title} width={280} height={280} style={{ height: 240, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                  <Image src={c.image} alt={c.title} width={400} height={400} style={{ height: 360, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
                   <span className={`badge ${c.badgeClass}`}>{c.badge}</span>
