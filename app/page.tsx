@@ -106,13 +106,20 @@ export default function HomePage() {
     <div>
 
       {/* ── Hero ── */}
-      <section style={{ background: 'linear-gradient(135deg, #0D1117 0%, #0a2a3a 50%, #0D1117 100%)', color: '#fff', padding: '96px 0 80px', position: 'relative', overflow: 'hidden' }}>
-        {/* Background accent */}
-        <div style={{ position: 'absolute', top: -100, right: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(13,190,243,0.12) 0%, transparent 70%)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', bottom: -80, left: -80, width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(40,158,84,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
+      <section style={{ position: 'relative', overflow: 'hidden', color: '#fff', minHeight: 620 }}>
+        {/* Hero background image */}
+        <Image
+          src="/MillionaireTraderSocietyhero.png"
+          alt="Millionaire Traders Society"
+          fill
+          priority
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+        {/* Gradient overlay — same dark tone as before, stronger on left */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(13,17,23,0.95) 0%, rgba(10,42,58,0.85) 50%, rgba(13,17,23,0.4) 100%)', zIndex: 1 }} />
 
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2, padding: '96px 24px 80px' }}>
+          <div style={{ maxWidth: 620 }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(13,190,243,0.12)', border: '1px solid rgba(13,190,243,0.25)', borderRadius: 50, padding: '6px 16px', marginBottom: 24 }}>
               <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#0DBEF3', display: 'inline-block' }} />
               <span style={{ fontSize: 13, fontWeight: 600, color: '#0DBEF3' }}>17,000+ Students and Counting</span>
@@ -125,11 +132,11 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p style={{ fontSize: 'clamp(16px, 2.5vw, 20px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, marginBottom: 36, maxWidth: 600, margin: '0 auto 36px' }}>
+            <p style={{ fontSize: 'clamp(16px, 2.5vw, 20px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, marginBottom: 36, maxWidth: 540 }}>
               Coach Jessica Ramos has helped over 17,000 students master futures, forex, and stock options trading — from complete beginners to 7-figure traders.
             </p>
 
-            <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 56 }}>
+            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 56 }}>
               <TrackedLink href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '16px 32px' }} tracking={{ event: 'cta_click', button_text: 'Start Free Today →', destination: '/free-course', page_section: 'hero' }}>
                 Start Free Today →
               </TrackedLink>
@@ -141,7 +148,7 @@ export default function HomePage() {
             {/* Stats */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 40 }} className="stats-grid">
               {STATS.map(s => (
-                <div key={s.value} style={{ textAlign: 'center' }}>
+                <div key={s.value} style={{ textAlign: 'left' }}>
                   <div style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 900, color: '#0DBEF3', lineHeight: 1 }}>{s.value}</div>
                   <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 6, fontWeight: 500 }}>{s.label}</div>
                 </div>
