@@ -1,6 +1,7 @@
 'use client'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
+import { pushDataLayer } from '@/lib/gtm'
 
 const COURSES = [
   { label: 'Free Beginners Course', href: '/free-course' },
@@ -27,7 +28,7 @@ export default function Nav() {
       <nav style={{ background: '#fff', borderBottom: '1px solid #e2e8f0', position: 'sticky', top: 0, zIndex: 50, boxShadow: '0 1px 8px rgba(0,0,0,0.06)' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
 
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }} onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Logo', destination: '/', page_section: 'nav' })}>
             <div style={{ width: 38, height: 38, borderRadius: '50%', background: 'linear-gradient(135deg, #0DBEF3, #289E54)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
               <span style={{ color: '#fff', fontWeight: 900, fontSize: 16 }}>M</span>
             </div>
@@ -39,7 +40,7 @@ export default function Nav() {
 
           {/* Desktop links */}
           <div className="nav-desktop" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-            <Link href="/" className="nav-link">Home</Link>
+            <Link href="/" className="nav-link" onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Home', destination: '/', page_section: 'nav_desktop' })}>Home</Link>
 
             <div style={{ position: 'relative' }} onMouseEnter={openDrop} onMouseLeave={closeDrop}>
               <span className="nav-link" style={{ cursor: 'default', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -50,26 +51,21 @@ export default function Nav() {
                 <div style={{ position: 'absolute', top: '100%', left: 0, paddingTop: 6, zIndex: 100, minWidth: 240 }}>
                   <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 10, boxShadow: '0 8px 32px rgba(0,0,0,0.12)', padding: 8 }}>
                     {COURSES.map(c => (
-                      <Link key={c.href} href={c.href} className="dropdown-item" onClick={() => setDropOpen(false)}>{c.label}</Link>
+                      <Link key={c.href} href={c.href} className="dropdown-item" onClick={() => { setDropOpen(false); pushDataLayer({ event: 'nav_click', link_text: c.label, destination: c.href, page_section: 'nav_courses_dropdown' }) }}>{c.label}</Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
 
-            <Link href="/about" className="nav-link">About Coach Jess</Link>
-            <Link href="/contact" className="nav-link">Contact</Link>
-            <Link href="/free-course" className="btn-outline" style={{ marginLeft: 4, padding: '9px 18px', fontSize: 13 }}>Free Course</Link>
-            <Link href="/courses" className="btn-primary" style={{ marginLeft: 4, padding: '10px 20px', fontSize: 14 }}>Join VIP</Link>
+            <Link href="/about" className="nav-link" onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'About Coach Jess', destination: '/about', page_section: 'nav_desktop' })}>About Coach Jess</Link>
+            <Link href="/contact" className="nav-link" onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Contact', destination: '/contact', page_section: 'nav_desktop' })}>Contact</Link>
+            <Link href="/free-course" className="btn-outline" style={{ marginLeft: 4, padding: '9px 18px', fontSize: 13 }} onClick={() => pushDataLayer({ event: 'cta_click', button_text: 'Free Course', destination: '/free-course', page_section: 'nav_desktop' })}>Free Course</Link>
+            <Link href="/courses" className="btn-primary" style={{ marginLeft: 4, padding: '10px 20px', fontSize: 14 }} onClick={() => pushDataLayer({ event: 'cta_click', button_text: 'Join VIP', destination: '/courses', page_section: 'nav_desktop' })}>Join VIP</Link>
           </div>
 
           {/* Mobile hamburger */}
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="nav-mobile-btn"
-            aria-label="Open menu"
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--dark)', padding: 8 }}
-          >
+          <button onClick={() => setMenuOpen(true)} className="nav-mobile-btn" aria-label="Open menu" style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--dark)', padding: 8 }}>
             <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -93,15 +89,15 @@ export default function Nav() {
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
             </div>
-            <Link href="/" className="dropdown-item" onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link href="/courses" className="dropdown-item" onClick={() => setMenuOpen(false)}>All Courses</Link>
+            <Link href="/" className="dropdown-item" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: 'Home', destination: '/', page_section: 'nav_mobile' }) }}>Home</Link>
+            <Link href="/courses" className="dropdown-item" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: 'All Courses', destination: '/courses', page_section: 'nav_mobile' }) }}>All Courses</Link>
             {COURSES.map(c => (
-              <Link key={c.href} href={c.href} className="dropdown-item" onClick={() => setMenuOpen(false)} style={{ paddingLeft: 28, fontSize: 13 }}>{c.label}</Link>
+              <Link key={c.href} href={c.href} className="dropdown-item" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: c.label, destination: c.href, page_section: 'nav_mobile_courses' }) }} style={{ paddingLeft: 28, fontSize: 13 }}>{c.label}</Link>
             ))}
-            <Link href="/about" className="dropdown-item" onClick={() => setMenuOpen(false)}>About Coach Jess</Link>
-            <Link href="/contact" className="dropdown-item" onClick={() => setMenuOpen(false)}>Contact</Link>
-            <Link href="/free-course" className="btn-outline" onClick={() => setMenuOpen(false)} style={{ marginTop: 12, justifyContent: 'center' }}>Get Free Course</Link>
-            <Link href="/courses" className="btn-primary" onClick={() => setMenuOpen(false)} style={{ marginTop: 8, justifyContent: 'center' }}>Join VIP →</Link>
+            <Link href="/about" className="dropdown-item" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: 'About Coach Jess', destination: '/about', page_section: 'nav_mobile' }) }}>About Coach Jess</Link>
+            <Link href="/contact" className="dropdown-item" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: 'Contact', destination: '/contact', page_section: 'nav_mobile' }) }}>Contact</Link>
+            <Link href="/free-course" className="btn-outline" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'cta_click', button_text: 'Get Free Course', destination: '/free-course', page_section: 'nav_mobile' }) }} style={{ marginTop: 12, justifyContent: 'center' }}>Get Free Course</Link>
+            <Link href="/courses" className="btn-primary" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'cta_click', button_text: 'Join VIP', destination: '/courses', page_section: 'nav_mobile' }) }} style={{ marginTop: 8, justifyContent: 'center' }}>Join VIP →</Link>
           </div>
         </div>
       )}

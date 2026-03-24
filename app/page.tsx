@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TrackedLink from '@/components/TrackedLink'
+import TrackedAnchor from '@/components/TrackedAnchor'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -111,12 +113,12 @@ export default function HomePage() {
             </p>
 
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 56 }}>
-              <Link href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '16px 32px' }}>
+              <TrackedLink href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '16px 32px' }} tracking={{ event: 'cta_click', button_text: 'Start Free Today →', destination: '/free-course', page_section: 'hero' }}>
                 Start Free Today →
-              </Link>
-              <Link href="/courses" className="btn-outline" style={{ fontSize: 16, padding: '16px 32px', borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }}>
+              </TrackedLink>
+              <TrackedLink href="/courses" className="btn-outline" style={{ fontSize: 16, padding: '16px 32px', borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }} tracking={{ event: 'cta_click', button_text: 'View All Courses', destination: '/courses', page_section: 'hero' }}>
                 View All Courses
-              </Link>
+              </TrackedLink>
             </div>
 
             {/* Stats */}
@@ -136,9 +138,9 @@ export default function HomePage() {
       <section style={{ background: 'linear-gradient(90deg, #289E54, #0DBEF3)', padding: '18px 0' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
           <span style={{ fontSize: 15, fontWeight: 700, color: '#fff' }}>🎁 Free Beginners Trading Course — A $500+ Value, Yours at No Cost</span>
-          <Link href="/free-course" style={{ background: '#fff', color: '#289E54', fontWeight: 800, fontSize: 13, padding: '8px 20px', borderRadius: 50, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+          <TrackedLink href="/free-course" style={{ background: '#fff', color: '#289E54', fontWeight: 800, fontSize: 13, padding: '8px 20px', borderRadius: 50, textDecoration: 'none', whiteSpace: 'nowrap' }} tracking={{ event: 'cta_click', button_text: 'Claim Free Access →', destination: '/free-course', page_section: 'free_course_banner' }}>
             Claim Free Access →
-          </Link>
+          </TrackedLink>
         </div>
       </section>
 
@@ -167,9 +169,9 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <Link href={c.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: c.accent, color: '#fff', fontWeight: 700, fontSize: 15, padding: '13px 24px', borderRadius: 50, textDecoration: 'none', textAlign: 'center' }}>
+                <TrackedLink href={c.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: c.accent, color: '#fff', fontWeight: 700, fontSize: 15, padding: '13px 24px', borderRadius: 50, textDecoration: 'none', textAlign: 'center' }} tracking={{ event: 'cta_click', button_text: c.cta, destination: c.href, page_section: 'courses_section' }}>
                   {c.cta}
-                </Link>
+                </TrackedLink>
               </div>
             ))}
           </div>
@@ -209,8 +211,8 @@ export default function HomePage() {
                 After years of mastering futures, forex, and stock options markets herself, Coach Jess built MTS to share her strategies with the world. Her straightforward, no-fluff teaching style has helped thousands of students consistently generate income from the markets.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Link href="/about" className="btn-primary">Meet Coach Jess →</Link>
-                <a href="https://www.youtube.com/@SayYes2Jess" target="_blank" rel="noopener noreferrer" className="btn-outline">Watch on YouTube</a>
+                <TrackedLink href="/about" className="btn-primary" tracking={{ event: 'cta_click', button_text: 'Meet Coach Jess →', destination: '/about', page_section: 'about_section' }}>Meet Coach Jess →</TrackedLink>
+                <TrackedAnchor href="https://www.youtube.com/@SayYes2Jess" target="_blank" rel="noopener noreferrer" className="btn-outline" tracking={{ event: 'social_click', platform: 'YouTube', destination: 'https://www.youtube.com/@SayYes2Jess', page_section: 'about_section' }}>Watch on YouTube</TrackedAnchor>
               </div>
             </div>
             <div style={{ background: 'linear-gradient(135deg, #0DBEF3, #289E54)', borderRadius: 24, padding: '48px 40px', color: '#fff', display: 'flex', flexDirection: 'column', gap: 28 }}>
@@ -263,8 +265,8 @@ export default function HomePage() {
             Join over 17,000 students who have transformed their financial future. No experience needed — start with the free course today.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '16px 36px' }}>Get Free Course →</Link>
-            <Link href="/courses" className="btn-outline" style={{ fontSize: 16, padding: '16px 36px', borderColor: 'rgba(255,255,255,0.25)', color: '#fff' }}>See All Courses</Link>
+            <TrackedLink href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '16px 36px' }} tracking={{ event: 'cta_click', button_text: 'Get Free Course →', destination: '/free-course', page_section: 'cta_banner' }}>Get Free Course →</TrackedLink>
+            <TrackedLink href="/courses" className="btn-outline" style={{ fontSize: 16, padding: '16px 36px', borderColor: 'rgba(255,255,255,0.25)', color: '#fff' }} tracking={{ event: 'cta_click', button_text: 'See All Courses', destination: '/courses', page_section: 'cta_banner' }}>See All Courses</TrackedLink>
           </div>
         </div>
       </section>

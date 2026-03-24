@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TrackedLink from '@/components/TrackedLink'
+import TrackedAnchor from '@/components/TrackedAnchor'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -35,9 +37,9 @@ export default function FreeCourse() {
                 Built by traders, for traders. Get the foundation you need to start reading charts, spotting trade setups, and protecting your money — completely free.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
-                <a href="https://millionairetraderssociety.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px' }}>
+                <TrackedAnchor href="https://millionairetraderssociety.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px' }} tracking={{ event: 'cta_click', button_text: 'Get Free Access →', destination: 'https://millionairetraderssociety.com', page_section: 'hero' }}>
                   Get Free Access →
-                </a>
+                </TrackedAnchor>
               </div>
               <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
                 {['No credit card needed', 'Instant access', 'Beginner friendly'].map(f => (
@@ -98,8 +100,8 @@ export default function FreeCourse() {
               Once you&apos;ve completed the free course, upgrade to VIP for advanced strategies, live webinars, and real trade ideas.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/courses#vip" style={{ background: '#fff', color: '#0DBEF3', fontWeight: 800, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none' }}>See VIP Course →</Link>
-              <Link href="/courses#bundle" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', fontWeight: 700, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>View All Courses</Link>
+              <TrackedLink href="/courses#vip" style={{ background: '#fff', color: '#0DBEF3', fontWeight: 800, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none' }} tracking={{ event: 'cta_click', button_text: 'See VIP Course →', destination: '/courses#vip', page_section: 'upgrade_path' }}>See VIP Course →</TrackedLink>
+              <TrackedLink href="/courses#bundle" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', fontWeight: 700, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }} tracking={{ event: 'cta_click', button_text: 'View All Courses', destination: '/courses#bundle', page_section: 'upgrade_path' }}>View All Courses</TrackedLink>
             </div>
           </div>
         </div>

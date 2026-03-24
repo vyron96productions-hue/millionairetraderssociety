@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TrackedLink from '@/components/TrackedLink'
+import TrackedAnchor from '@/components/TrackedAnchor'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -111,7 +113,7 @@ export default function CoursesPage() {
           <span className="section-label" style={{ color: '#0DBEF3' }}>Trading Education</span>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 900, letterSpacing: '-1px', marginBottom: 16 }}>All Courses & Programs</h1>
           <p style={{ fontSize: 18, opacity: 0.8, maxWidth: 520, margin: '0 auto 32px', lineHeight: 1.7 }}>Start free and scale up. Every program is designed to meet you where you are and take you where you want to go.</p>
-          <Link href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '14px 32px' }}>Start Free Today →</Link>
+          <TrackedLink href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '14px 32px' }} tracking={{ event: 'cta_click', button_text: 'Start Free Today →', destination: '/free-course', page_section: 'hero' }}>Start Free Today →</TrackedLink>
         </div>
       </section>
 
@@ -143,9 +145,15 @@ export default function CoursesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href={c.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: c.accent, color: '#fff', fontWeight: 700, fontSize: 15, padding: '14px 24px', borderRadius: 50, textDecoration: 'none', boxShadow: `0 4px 14px ${c.accent}33` }}>
-                  {c.cta}
-                </Link>
+                {c.href.startsWith('http') ? (
+                  <TrackedAnchor href={c.href} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: c.accent, color: '#fff', fontWeight: 700, fontSize: 15, padding: '14px 24px', borderRadius: 50, textDecoration: 'none', boxShadow: `0 4px 14px ${c.accent}33` }} tracking={{ event: 'cta_click', button_text: c.cta, destination: c.href, page_section: 'courses_section' }}>
+                    {c.cta}
+                  </TrackedAnchor>
+                ) : (
+                  <TrackedLink href={c.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: c.accent, color: '#fff', fontWeight: 700, fontSize: 15, padding: '14px 24px', borderRadius: 50, textDecoration: 'none', boxShadow: `0 4px 14px ${c.accent}33` }} tracking={{ event: 'cta_click', button_text: c.cta, destination: c.href, page_section: 'courses_section' }}>
+                    {c.cta}
+                  </TrackedLink>
+                )}
               </div>
             ))}
           </div>
@@ -158,8 +166,8 @@ export default function CoursesPage() {
           <h2 className="section-title" style={{ marginBottom: 12 }}>Not sure which course is <span>right for you?</span></h2>
           <p style={{ fontSize: 16, color: 'var(--gray)', marginBottom: 28, lineHeight: 1.7 }}>Start with the free course — it&apos;s the foundation for everything else. You can always upgrade when you&apos;re ready.</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/free-course" className="btn-primary">Start Free →</Link>
-            <Link href="/contact" className="btn-outline">Ask a Question</Link>
+            <TrackedLink href="/free-course" className="btn-primary" tracking={{ event: 'cta_click', button_text: 'Start Free →', destination: '/free-course', page_section: 'faq_strip' }}>Start Free →</TrackedLink>
+            <TrackedLink href="/contact" className="btn-outline" tracking={{ event: 'cta_click', button_text: 'Ask a Question', destination: '/contact', page_section: 'faq_strip' }}>Ask a Question</TrackedLink>
           </div>
         </div>
       </section>

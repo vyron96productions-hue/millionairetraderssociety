@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TrackedLink from '@/components/TrackedLink'
+import TrackedAnchor from '@/components/TrackedAnchor'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -43,8 +45,8 @@ export default function AboutPage() {
                 Today, Millionaire Traders Society is one of the most trusted trading education communities online, with students from age 8 to 99 learning to trade profitably — on their own schedule, in their own way.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Link href="/courses" className="btn-primary">Start Learning →</Link>
-                <a href="https://www.youtube.com/@SayYes2Jess" target="_blank" rel="noopener noreferrer" className="btn-outline">YouTube Channel</a>
+                <TrackedLink href="/courses" className="btn-primary" tracking={{ event: 'cta_click', button_text: 'Start Learning →', destination: '/courses', page_section: 'bio_section' }}>Start Learning →</TrackedLink>
+                <TrackedAnchor href="https://www.youtube.com/@SayYes2Jess" target="_blank" rel="noopener noreferrer" className="btn-outline" tracking={{ event: 'social_click', platform: 'YouTube', destination: 'https://www.youtube.com/@SayYes2Jess', page_section: 'bio_section' }}>YouTube Channel</TrackedAnchor>
               </div>
             </div>
 
@@ -73,12 +75,13 @@ export default function AboutPage() {
                   { label: 'Instagram', handle: '@stock_bae', href: 'https://www.instagram.com/stock_bae/', color: '#db2777', icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg> },
                   { label: 'X / Twitter', handle: '@sayyes2jess_', href: 'https://x.com/sayyes2jess_', color: '#0D1117', icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> },
                 ].map(s => (
-                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                  <TrackedAnchor key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                     style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid #f1f5f9', textDecoration: 'none' }}
+                    tracking={{ event: 'social_click', platform: s.label === 'X / Twitter' ? 'X' : s.label, destination: s.href, page_section: 'about_socials' }}
                   >
                     <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, fontWeight: 600, color: 'var(--dark)' }}>{s.icon}{s.label}</span>
                     <span style={{ fontSize: 13, color: s.color, fontWeight: 600 }}>{s.handle}</span>
-                  </a>
+                  </TrackedAnchor>
                 ))}
               </div>
             </div>
@@ -123,7 +126,7 @@ export default function AboutPage() {
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', marginBottom: 28, maxWidth: 440, margin: '0 auto 28px', lineHeight: 1.7 }}>
             Begin with the free course — no experience, no credit card needed.
           </p>
-          <Link href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '14px 32px' }}>Get Free Course →</Link>
+          <TrackedLink href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '14px 32px' }} tracking={{ event: 'cta_click', button_text: 'Get Free Course →', destination: '/free-course', page_section: 'cta_banner' }}>Get Free Course →</TrackedLink>
         </div>
       </section>
     </div>
