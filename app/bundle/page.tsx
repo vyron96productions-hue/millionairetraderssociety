@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'VIP Bundle — Everything Included',
   description: 'The complete Millionaire Traders Society experience. Get every resource, course, and community access bundled together for maximum results.',
+  alternates: { canonical: 'https://millionairetraderssociety.com/bundle' },
 }
 
 const INCLUDES = [

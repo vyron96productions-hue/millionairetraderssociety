@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'VIP Trading Course',
   description: 'Advanced trading education covering forex, futures, crypto, and more. Live webinars, trade ideas, and a private community of serious traders.',
+  alternates: { canonical: 'https://millionairetraderssociety.com/vip-course' },
 }
 
 const MODULES = [

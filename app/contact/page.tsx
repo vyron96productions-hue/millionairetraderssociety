@@ -3,7 +3,7 @@ import ContactForm from '@/components/ContactForm'
 import TrackedAnchor from '@/components/TrackedAnchor'
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'Contact Us',
   description: 'Get in touch with the Millionaire Traders Society team. Questions about courses, membership, or trading? We\'re here to help.',
 }
 

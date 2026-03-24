@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: '60-Day Trader Workshop',
   description: '60 days of structured stock options education. Learn price action analysis, trade setup identification, and build confidence in your own analysis.',
+  alternates: { canonical: 'https://millionairetraderssociety.com/workshop' },
 }
 
 const MODULES = [

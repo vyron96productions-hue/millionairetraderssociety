@@ -169,7 +169,7 @@ a { color: inherit; }
 
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 
@@ -219,6 +219,7 @@ a { color: inherit; }
   .three-col-grid { grid-template-columns: 1fr; gap: 20px; }
   .four-col-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .courses-grid { grid-template-columns: 1fr; gap: 20px; }
+  .courses-two-grid { grid-template-columns: 1fr !important; }
   .show-mobile-only { display: inline-flex !important; }
   .show-desktop-only { display: none !important; }
 }
