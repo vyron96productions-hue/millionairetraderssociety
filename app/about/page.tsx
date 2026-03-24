@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section style={{ background: 'linear-gradient(135deg, #0D1117, #0a2a3a)', color: '#fff', padding: '72px 0 80px', textAlign: 'center' }}>
+      <section style={{ background: 'linear-gradient(135deg, #0D1117, #0a2a3a)', color: '#fff', padding: '48px 0 52px', textAlign: 'center' }}>
         <div className="container">
           <span className="section-label" style={{ color: '#0DBEF3' }}>The Coach Behind the Community</span>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 900, letterSpacing: '-1px', marginBottom: 16 }}>Meet Coach Jessica Ramos</h1>
@@ -32,8 +32,9 @@ export default function AboutPage() {
       {/* Bio + Timeline */}
       <section style={{ padding: '52px 0 72px', background: 'var(--light)' }}>
         <div className="container">
-          {/* Two-col: story left, photo right */}
-          <div className="two-col-grid" style={{ marginBottom: 64 }}>
+          <div className="two-col-grid" style={{ alignItems: 'flex-start' }}>
+
+            {/* LEFT: Story + Timeline */}
             <div>
               <span className="section-label">Her Story</span>
               <h2 className="section-title">From Trader to <span>Educator</span></h2>
@@ -46,12 +47,37 @@ export default function AboutPage() {
               <p style={{ fontSize: 16, color: 'var(--gray)', lineHeight: 1.85, marginBottom: 32 }}>
                 Today, Millionaire Traders Society is one of the most trusted trading education communities online, with students from age 8 to 99 learning to trade profitably — on their own schedule, in their own way.
               </p>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48 }}>
                 <TrackedLink href="/courses" className="btn-primary" tracking={{ event: 'cta_click', button_text: 'Start Learning →', destination: '/courses', page_section: 'bio_section' }}>Start Learning →</TrackedLink>
                 <TrackedAnchor href="https://www.youtube.com/@SayYes2Jess" target="_blank" rel="noopener noreferrer" className="btn-outline" tracking={{ event: 'social_click', platform: 'YouTube', destination: 'https://www.youtube.com/@SayYes2Jess', page_section: 'bio_section' }}>YouTube Channel</TrackedAnchor>
               </div>
+
+              {/* Timeline directly under story */}
+              <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: 36 }}>
+                <span className="section-label">The Journey</span>
+                <h2 className="section-title" style={{ fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 32 }}>MTS <span>Milestones</span></h2>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                  {MILESTONES.map((m, i) => (
+                    <div key={m.year} style={{ display: 'flex', gap: 20, position: 'relative' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+                        <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'linear-gradient(135deg, #0DBEF3, #289E54)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1 }}>
+                          <span style={{ color: '#fff', fontWeight: 900, fontSize: 11 }}>{m.year}</span>
+                        </div>
+                        {i < MILESTONES.length - 1 && (
+                          <div style={{ width: 2, flexGrow: 1, background: '#e2e8f0', minHeight: 28 }} />
+                        )}
+                      </div>
+                      <div style={{ paddingBottom: 28 }}>
+                        <h3 style={{ fontSize: 16, fontWeight: 800, color: 'var(--dark)', marginBottom: 4 }}>{m.title}</h3>
+                        <p style={{ fontSize: 13, color: 'var(--gray)', lineHeight: 1.7 }}>{m.body}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
+            {/* RIGHT: Photo + Stats + Socials */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
               <div style={{ borderRadius: 24, overflow: 'hidden' }}>
                 <Image src="/coach-jess.png" alt="Coach Jessica Ramos" width={600} height={700} style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block' }} />
@@ -93,32 +119,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Timeline — directly under story */}
-          <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: 52 }}>
-            <div style={{ textAlign: 'center', marginBottom: 44 }}>
-              <span className="section-label">The Journey</span>
-              <h2 className="section-title">MTS <span>Milestones</span></h2>
-            </div>
-            <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 0 }}>
-              {MILESTONES.map((m, i) => (
-                <div key={m.year} style={{ display: 'flex', gap: 28, position: 'relative' }}>
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
-                    <div style={{ width: 48, height: 48, borderRadius: '50%', background: 'linear-gradient(135deg, #0DBEF3, #289E54)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1 }}>
-                      <span style={{ color: '#fff', fontWeight: 900, fontSize: 12 }}>{m.year}</span>
-                    </div>
-                    {i < MILESTONES.length - 1 && (
-                      <div style={{ width: 2, flexGrow: 1, background: '#e2e8f0', minHeight: 32 }} />
-                    )}
-                  </div>
-                  <div style={{ paddingBottom: 32 }}>
-                    <h3 style={{ fontSize: 18, fontWeight: 800, color: 'var(--dark)', marginBottom: 6 }}>{m.title}</h3>
-                    <p style={{ fontSize: 14, color: 'var(--gray)', lineHeight: 1.7 }}>{m.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
