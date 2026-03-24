@@ -149,7 +149,7 @@ export default function HomePage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 40 }} className="stats-grid">
               {STATS.map(s => (
                 <div key={s.value} style={{ textAlign: 'left' }}>
-                  <div style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 900, color: '#0DBEF3', lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontSize: 'clamp(18px, 2.2vw, 28px)', fontWeight: 900, color: '#0DBEF3', lineHeight: 1, whiteSpace: 'nowrap' }}>{s.value}</div>
                   <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 6, fontWeight: 500 }}>{s.label}</div>
                 </div>
               ))}
