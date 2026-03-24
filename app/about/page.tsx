@@ -29,10 +29,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Bio */}
-      <section style={{ padding: '88px 0', background: 'var(--light)' }}>
+      {/* Bio + Timeline */}
+      <section style={{ padding: '52px 0 72px', background: 'var(--light)' }}>
         <div className="container">
-          <div className="two-col-grid">
+          {/* Two-col: story left, photo right */}
+          <div className="two-col-grid" style={{ marginBottom: 64 }}>
             <div>
               <span className="section-label">Her Story</span>
               <h2 className="section-title">From Trader to <span>Educator</span></h2>
@@ -52,11 +53,9 @@ export default function AboutPage() {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-              {/* Photo */}
               <div style={{ borderRadius: 24, overflow: 'hidden' }}>
                 <Image src="/coach-jess.png" alt="Coach Jessica Ramos" width={600} height={700} style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block' }} />
               </div>
-              {/* Stats card */}
               <div style={{ background: 'linear-gradient(135deg, #0DBEF3, #289E54)', borderRadius: 20, padding: '36px 32px', color: '#fff' }}>
                 <h3 style={{ fontSize: 18, fontWeight: 800, marginBottom: 24 }}>By the Numbers</h3>
                 {[
@@ -71,8 +70,6 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-
-              {/* Socials card */}
               <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 20, padding: '28px 24px' }}>
                 <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--dark)', marginBottom: 16 }}>Follow Coach Jess</h3>
                 {[
@@ -91,33 +88,31 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Timeline */}
-      <section style={{ padding: '88px 0', background: '#fff' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 52 }}>
-            <span className="section-label">The Journey</span>
-            <h2 className="section-title">MTS <span>Milestones</span></h2>
-          </div>
-          <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 0 }}>
-            {MILESTONES.map((m, i) => (
-              <div key={m.year} style={{ display: 'flex', gap: 28, position: 'relative' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: '50%', background: 'linear-gradient(135deg, #0DBEF3, #289E54)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1 }}>
-                    <span style={{ color: '#fff', fontWeight: 900, fontSize: 12 }}>{m.year}</span>
+          {/* Timeline — directly under story */}
+          <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: 52 }}>
+            <div style={{ textAlign: 'center', marginBottom: 44 }}>
+              <span className="section-label">The Journey</span>
+              <h2 className="section-title">MTS <span>Milestones</span></h2>
+            </div>
+            <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 0 }}>
+              {MILESTONES.map((m, i) => (
+                <div key={m.year} style={{ display: 'flex', gap: 28, position: 'relative' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+                    <div style={{ width: 48, height: 48, borderRadius: '50%', background: 'linear-gradient(135deg, #0DBEF3, #289E54)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1 }}>
+                      <span style={{ color: '#fff', fontWeight: 900, fontSize: 12 }}>{m.year}</span>
+                    </div>
+                    {i < MILESTONES.length - 1 && (
+                      <div style={{ width: 2, flexGrow: 1, background: '#e2e8f0', minHeight: 32 }} />
+                    )}
                   </div>
-                  {i < MILESTONES.length - 1 && (
-                    <div style={{ width: 2, flexGrow: 1, background: '#e2e8f0', minHeight: 32 }} />
-                  )}
+                  <div style={{ paddingBottom: 32 }}>
+                    <h3 style={{ fontSize: 18, fontWeight: 800, color: 'var(--dark)', marginBottom: 6 }}>{m.title}</h3>
+                    <p style={{ fontSize: 14, color: 'var(--gray)', lineHeight: 1.7 }}>{m.body}</p>
+                  </div>
                 </div>
-                <div style={{ paddingBottom: 32 }}>
-                  <h3 style={{ fontSize: 18, fontWeight: 800, color: 'var(--dark)', marginBottom: 6 }}>{m.title}</h3>
-                  <p style={{ fontSize: 14, color: 'var(--gray)', lineHeight: 1.7 }}>{m.body}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
