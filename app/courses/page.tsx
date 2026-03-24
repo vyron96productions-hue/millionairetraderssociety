@@ -53,7 +53,7 @@ const COURSES = [
       'Access to past and future webinars',
     ],
     cta: 'Join VIP →',
-    href: 'https://millionairetraderssociety.com',
+    href: '/vip-course',
     accent: '#0DBEF3',
     highlight: true,
     image: '/course-vip.jpg',
@@ -77,7 +77,7 @@ const COURSES = [
       'Continuing education included',
     ],
     cta: 'Join the Workshop →',
-    href: 'https://millionairetraderssociety.com',
+    href: '/workshop',
     accent: '#289E54',
     highlight: false,
     image: '/course-60day.png',
@@ -102,7 +102,7 @@ const COURSES = [
       'Priority support',
     ],
     cta: 'Get the Bundle →',
-    href: 'https://millionairetraderssociety.com',
+    href: '/bundle',
     accent: '#289E54',
     highlight: false,
     image: '/course-bundle.png',
@@ -134,7 +134,7 @@ export default function CoursesPage() {
                   </div>
                 )}
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-                  <Image src={c.image} alt={c.title} width={280} height={240} style={{ height: 200, width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 6px 18px rgba(0,0,0,0.12))' }} />
+                  <Image src={c.image} alt={c.title} width={320} height={280} style={{ height: 260, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
                   <span style={{ background: c.badgeBg, color: c.badgeColor, fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 50, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{c.badge}</span>

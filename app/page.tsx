@@ -38,7 +38,7 @@ const COURSES = [
     description: 'Dive deep into forex, futures, crypto, and more. Live webinars, curated trade ideas, and a private support community.',
     features: ['Forex, futures & crypto strategies', 'Live webinars & continuing education', 'Private support group chat', 'Curated trade ideas', '24/7 access to recorded sessions'],
     cta: 'Join VIP →',
-    href: '/courses#vip',
+    href: '/vip-course',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
     image: '/course-vip.jpg',
@@ -51,7 +51,7 @@ const COURSES = [
     description: 'The complete package: education vault, trade ideas, webinars, stock options bootcamp, and the 60-Day Workshop.',
     features: ['Everything in VIP Course', '60-Day Trader Workshop', 'Stock Options Bootcamp', 'Education vault access', 'Cancel anytime'],
     cta: 'Get the Bundle →',
-    href: '/courses#bundle',
+    href: '/bundle',
     accent: '#289E54',
     bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)',
     image: '/course-bundle.png',
@@ -160,7 +160,7 @@ export default function HomePage() {
             {COURSES.map(c => (
               <div key={c.title} style={{ background: c.bg, borderRadius: 24, padding: '28px 28px 36px', display: 'flex', flexDirection: 'column', border: `1px solid ${c.accent}22` }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
-                  <Image src={c.image} alt={c.title} width={220} height={220} style={{ height: 180, width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.15))' }} />
+                  <Image src={c.image} alt={c.title} width={280} height={280} style={{ height: 240, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
                   <span className={`badge ${c.badgeClass}`}>{c.badge}</span>
@@ -224,7 +224,7 @@ export default function HomePage() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
               <div style={{ borderRadius: 24, overflow: 'hidden', position: 'relative' }}>
-                <Image src="/coach-jess.png" alt="Coach Jessica Ramos" width={600} height={700} style={{ width: '100%', height: 420, objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+                <Image src="/coach-jess.png" alt="Coach Jessica Ramos" width={600} height={700} style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block' }} />
               </div>
               <div style={{ background: 'linear-gradient(135deg, #0DBEF3, #289E54)', borderRadius: 20, padding: '28px 32px', color: '#fff', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                 {[

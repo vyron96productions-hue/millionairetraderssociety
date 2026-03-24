@@ -54,7 +54,7 @@ export default function AboutPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
               {/* Photo */}
               <div style={{ borderRadius: 24, overflow: 'hidden' }}>
-                <Image src="/coach-jess.png" alt="Coach Jessica Ramos" width={600} height={700} style={{ width: '100%', height: 460, objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+                <Image src="/coach-jess.png" alt="Coach Jessica Ramos" width={600} height={700} style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block' }} />
               </div>
               {/* Stats card */}
               <div style={{ background: 'linear-gradient(135deg, #0DBEF3, #289E54)', borderRadius: 20, padding: '36px 32px', color: '#fff' }}>
