@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'VIP Bundle — Everything Included',
   description: 'The complete Millionaire Traders Society experience. Get every resource, course, and community access bundled together for maximum results.',
-  alternates: { canonical: 'https://millionairetraderssociety.com/bundle' },
+  alternates: { canonical: 'https://learnwithace.teachable.com/p/vip-stock-options/bundle' },
 }
 
 const INCLUDES = [
@@ -40,7 +40,7 @@ export default function BundlePage() {
                 The complete Millionaire Traders Society experience — every course, every webinar, every resource, and the entire community. One subscription. Everything included.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
-                <TrackedAnchor href="https://millionairetraderssociety.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px', background: '#289E54', boxShadow: '0 4px 20px rgba(40,158,84,0.4)' }} tracking={{ event: 'cta_click', button_text: 'Get the Bundle →', destination: 'https://millionairetraderssociety.com', page_section: 'hero' }}>
+                <TrackedAnchor href="https://learnwithace.teachable.com/p/vip-stock-options" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px', background: '#289E54', boxShadow: '0 4px 20px rgba(40,158,84,0.4)' }} tracking={{ event: 'cta_click', button_text: 'Get the Bundle →', destination: 'https://learnwithace.teachable.com/p/vip-stock-options', page_section: 'hero' }}>
                   Get the Bundle →
                 </TrackedAnchor>
                 <TrackedLink href="/courses" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', fontWeight: 700, fontSize: 15, padding: '15px 28px', borderRadius: 50, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }} tracking={{ event: 'cta_click', button_text: 'Compare All Courses', destination: '/courses', page_section: 'hero' }}>Compare All Courses</TrackedLink>
@@ -109,7 +109,7 @@ export default function BundlePage() {
               Start with the free course if you&apos;re new — or jump straight into the bundle and get the full experience from day one.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <TrackedAnchor href="https://millionairetraderssociety.com" target="_blank" rel="noopener noreferrer" style={{ background: '#fff', color: '#289E54', fontWeight: 800, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none' }} tracking={{ event: 'cta_click', button_text: 'Get the Bundle →', destination: 'https://millionairetraderssociety.com', page_section: 'cta_banner' }}>Get the Bundle →</TrackedAnchor>
+              <TrackedAnchor href="https://learnwithace.teachable.com/p/vip-stock-options" target="_blank" rel="noopener noreferrer" style={{ background: '#fff', color: '#289E54', fontWeight: 800, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none' }} tracking={{ event: 'cta_click', button_text: 'Get the Bundle →', destination: 'https://learnwithace.teachable.com/p/vip-stock-options', page_section: 'cta_banner' }}>Get the Bundle →</TrackedAnchor>
               <TrackedLink href="/free-course" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', fontWeight: 700, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }} tracking={{ event: 'cta_click', button_text: 'Start Free First', destination: '/free-course', page_section: 'cta_banner' }}>Start Free First</TrackedLink>
             </div>
           </div>
