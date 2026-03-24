@@ -10,8 +10,8 @@ const COURSES = [
   {
     id: 'free',
     badge: 'FREE',
-    badgeColor: '#f59e0b',
-    badgeBg: '#fef3c7',
+    badgeColor: '#289E54',
+    badgeBg: '#e8f5e9',
     title: 'Beginners Trading Course',
     price: 'Free',
     priceNote: 'A $500+ value — no credit card needed',
@@ -26,7 +26,7 @@ const COURSES = [
     ],
     cta: 'Get Free Access →',
     href: '/free-course',
-    accent: '#f59e0b',
+    accent: '#289E54',
     highlight: false,
   },
   {
@@ -55,9 +55,9 @@ const COURSES = [
   },
   {
     id: 'workshop',
-    badge: 'STRUCTURED',
-    badgeColor: '#7c3aed',
-    badgeBg: '#ede9fe',
+    badge: 'STOCK OPTIONS',
+    badgeColor: '#0a9ecc',
+    badgeBg: '#e0f7fe',
     title: '60-Day Trader Workshop',
     price: 'One-Time',
     priceNote: 'Stock options education program',
@@ -73,7 +73,7 @@ const COURSES = [
     ],
     cta: 'Join the Workshop →',
     href: 'https://millionairetraderssociety.com',
-    accent: '#7c3aed',
+    accent: '#0DBEF3',
     highlight: false,
   },
   {
@@ -120,7 +120,7 @@ export default function CoursesPage() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 28 }} className="courses-two-grid">
             {COURSES.map(c => (
-              <div key={c.id} id={c.id} style={{ background: '#fff', borderRadius: 24, padding: '36px 32px', border: c.highlight ? `2px solid ${c.accent}` : '1px solid #e2e8f0', position: 'relative', boxShadow: c.highlight ? `0 8px 32px ${c.accent}22` : 'none' }}>
+              <div key={c.id} id={c.id} style={{ background: '#fff', borderRadius: 24, padding: '36px 32px', border: c.highlight ? `2px solid ${c.accent}` : '1px solid #e2e8f0', position: 'relative', boxShadow: c.highlight ? `0 8px 32px ${c.accent}22` : 'none', display: 'flex', flexDirection: 'column' }}>
                 {c.highlight && (
                   <div style={{ position: 'absolute', top: -14, left: '50%', transform: 'translateX(-50%)', background: c.accent, color: '#fff', fontSize: 11, fontWeight: 800, padding: '4px 16px', borderRadius: 50, letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
                     ★ Most Popular
@@ -135,7 +135,7 @@ export default function CoursesPage() {
                 </div>
                 <h2 style={{ fontSize: 24, fontWeight: 900, color: 'var(--dark)', marginBottom: 12, lineHeight: 1.2 }}>{c.title}</h2>
                 <p style={{ fontSize: 14, color: 'var(--gray)', lineHeight: 1.75, marginBottom: 24 }}>{c.description}</p>
-                <ul style={{ listStyle: 'none', marginBottom: 28, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 12px' }}>
+                <ul style={{ listStyle: 'none', marginBottom: 28, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 12px', flexGrow: 1 }}>
                   {c.features.map(f => (
                     <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: 6, fontSize: 13, color: 'var(--dark)' }}>
                       <span style={{ color: c.accent, fontWeight: 700, flexShrink: 0 }}>✓</span>

@@ -16,15 +16,15 @@ const STATS = [
 const COURSES = [
   {
     badge: 'FREE',
-    badgeClass: 'badge-free',
+    badgeClass: 'badge-green',
     title: 'Beginners Trading Course',
     subtitle: 'Start Here',
     description: 'Learn the fundamentals of technical analysis, chart reading, and trade setups. A $500+ value — completely free.',
     features: ['Technical analysis basics', 'Chart reading & patterns', 'Risk management intro', 'Trade setup identification'],
     cta: 'Get Free Access →',
     href: '/free-course',
-    accent: '#f59e0b',
-    bg: 'linear-gradient(135deg, #fffbeb, #fef3c7)',
+    accent: '#289E54',
+    bg: 'linear-gradient(135deg, #e8f5e9, #d4edda)',
   },
   {
     badge: 'POPULAR',
