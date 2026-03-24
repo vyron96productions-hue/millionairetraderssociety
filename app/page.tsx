@@ -116,7 +116,7 @@ export default function HomePage() {
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
         {/* Gradient overlay — same dark tone as before, stronger on left */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(13,17,23,0.95) 0%, rgba(10,42,58,0.85) 50%, rgba(13,17,23,0.4) 100%)', zIndex: 1 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(13,17,23,0.92) 0%, rgba(10,42,58,0.6) 55%, rgba(13,17,23,0.05) 100%)', zIndex: 1 }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 2, padding: '96px 24px 80px' }}>
           <div style={{ maxWidth: 620 }}>
