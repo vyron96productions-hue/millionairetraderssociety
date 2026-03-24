@@ -38,7 +38,7 @@ export default function FreeCourse() {
                 Built by traders, for traders. Get the foundation you need to start reading charts, spotting trade setups, and protecting your money — completely free.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
-                <TrackedAnchor href="https://millionairetraderssociety.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px' }} tracking={{ event: 'cta_click', button_text: 'Get Free Access →', destination: 'https://millionairetraderssociety.com', page_section: 'hero' }}>
+                <TrackedAnchor href="https://learnwithace.teachable.com/p/tradingforbeginners" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px' }} tracking={{ event: 'cta_click', button_text: 'Get Free Access →', destination: 'https://learnwithace.teachable.com/p/tradingforbeginners', page_section: 'hero' }}>
                   Get Free Access →
                 </TrackedAnchor>
               </div>
