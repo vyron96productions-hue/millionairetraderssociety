@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 const INCLUDES = [
   { icon: '📈', title: 'VIP Trading Course', body: 'Advanced strategies across forex, futures, and crypto with live webinars and trade ideas.' },
   { icon: '📊', title: '60-Day Trader Workshop', body: '60 days of structured stock options education from fundamentals to high-probability setups.' },
-  { icon: '🏆', title: 'Stock Options Bootcamp', body: 'Intensive bootcamp covering advanced options strategies, Greeks, and market positioning.' },
   { icon: '🗄️', title: 'Full Education Vault', body: 'Access to every past webinar, workshop recording, and course material ever produced by MTS.' },
   { icon: '🎥', title: 'All Live & Recorded Webinars', body: 'Every live session Coach Jess hosts — past and future — is yours with the bundle.' },
   { icon: '👥', title: 'Private Community Chat', body: 'Connect with thousands of serious MTS traders in the exclusive private group.' },
@@ -62,7 +61,6 @@ export default function BundlePage() {
               {[
                 { icon: '📈', text: 'VIP Trading Course' },
                 { icon: '📊', text: '60-Day Trader Workshop' },
-                { icon: '🏆', text: 'Stock Options Bootcamp' },
                 { icon: '🗄️', text: 'Full education vault access' },
                 { icon: '👥', text: 'Private community chat' },
                 { icon: '⚡', text: 'Priority support' },
