@@ -37,11 +37,11 @@ export default function Trading4KidzPage() {
                 <span style={{ fontSize: 13, fontWeight: 800, color: '#289E54' }}>🎓 KIDS &amp; FAMILY EDUCATION</span>
               </div>
               <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-1px', marginBottom: 20 }}>
-                Teaching Kids to<br />
-                <span style={{ background: 'linear-gradient(90deg, #289E54, #0DBEF3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Think Like Investors</span>
+                Market Basics<br />
+                <span style={{ background: 'linear-gradient(90deg, #289E54, #0DBEF3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Made Simple</span>
               </h1>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, marginBottom: 36 }}>
-                Trading4Kidz makes financial education fun, engaging, and accessible for kids and parents. From understanding stocks to building smart money habits — the next generation starts here.
+                Investing &amp; trading explained in plain language kids actually understand.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
                 <TrackedAnchor

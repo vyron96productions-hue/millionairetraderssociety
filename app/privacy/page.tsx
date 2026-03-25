@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'Privacy Policy for Millionaire Traders Society. Learn how we collect, use, and protect your personal information.',
+  description: 'Privacy Policy for Millionaire Traders Society. Effective March 25, 2026.',
 }
 
 export default function PrivacyPage() {
@@ -14,89 +14,79 @@ export default function PrivacyPage() {
         <div className="container">
           <span className="section-label" style={{ color: '#0DBEF3' }}>Legal</span>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-1px', marginBottom: 16 }}>Privacy Policy</h1>
-          <p style={{ fontSize: 16, opacity: 0.7, maxWidth: 480, margin: '0 auto' }}>Your privacy matters to us. This policy explains how Millionaire Traders Society collects and uses your information.</p>
+          <p style={{ fontSize: 16, opacity: 0.7, maxWidth: 480, margin: '0 auto' }}>Effective Date: March 25, 2026</p>
         </div>
       </section>
 
       <section style={{ padding: '72px 0', background: '#fff' }}>
         <div className="container" style={{ maxWidth: 800 }}>
 
+          <div style={{ background: '#f0f9ff', border: '1px solid #bae6fd', borderRadius: 12, padding: '20px 24px', marginBottom: 40 }}>
+            <p style={{ fontSize: 14, color: '#0369a1', lineHeight: 1.7 }}>
+              Millionaire Traders Society respects your privacy. This policy explains how we collect, use, and protect your personal information.
+            </p>
+          </div>
+
           {[
             {
               title: '1. Information We Collect',
-              body: `We collect information you provide directly to us, including:
-
-• Name and email address when you sign up for a course or our mailing list
-• Billing and payment information when you purchase a course or membership
-• Communications you send us through our contact form or email
-• Profile information if you create an account on our platform
-
-We also automatically collect certain technical information when you visit our website, including IP address, browser type, pages visited, time spent on pages, and referring URLs.`,
+              body: `We may collect:
+• Name
+• Email
+• Payment information
+• Usage data`,
             },
             {
-              title: '2. How We Use Your Information',
-              body: `We use the information we collect to:
-
-• Provide, maintain, and improve our courses and services
-• Process transactions and send related information (confirmations, invoices, updates)
-• Send promotional communications about courses, webinars, and trading education (you may opt out at any time)
-• Respond to your questions and provide customer support
-• Monitor and analyze usage patterns to improve our platform
-• Comply with legal obligations`,
+              title: '2. How We Use Information',
+              body: `We use your data to:
+• Provide services
+• Process payments
+• Improve user experience
+• Send updates`,
             },
             {
-              title: '3. Sharing of Information',
-              body: `We do not sell, trade, or rent your personal information to third parties. We may share your information with:
-
-• Service providers who assist us in operating our website and delivering our services (e.g., payment processors, email delivery services)
-• Analytics providers to help us understand how our website is used
-• Law enforcement or government agencies when required by law
-
-All third-party service providers are contractually required to protect your information and may only use it to perform services on our behalf.`,
+              title: '3. Payment Security',
+              body: `Payments are processed via secure third-party providers. We do not store full payment details.`,
             },
             {
-              title: '4. Cookies and Tracking',
-              body: `We use cookies and similar tracking technologies to improve your experience on our website. Cookies help us remember your preferences, understand how you use our site, and deliver relevant content.
+              title: '4. Sharing Information',
+              body: `We do NOT sell your personal data.
 
-You can control cookies through your browser settings. However, disabling cookies may affect the functionality of certain features on our website.
-
-We may also use third-party analytics tools (such as Google Analytics) to collect information about website traffic and usage patterns.`,
+We may share data with:
+• Payment processors
+• Service providers`,
             },
             {
-              title: '5. Data Security',
-              body: `We take reasonable measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. We use industry-standard encryption (SSL/TLS) to protect data transmitted to and from our website.
-
-However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.`,
+              title: '5. Cookies',
+              body: `We may use cookies to:
+• Improve functionality
+• Analyze traffic`,
             },
             {
-              title: '6. Data Retention',
-              body: `We retain your personal information for as long as your account is active or as needed to provide you with our services. We will also retain your information as necessary to comply with legal obligations, resolve disputes, and enforce our agreements.
-
-You may request deletion of your personal information at any time by contacting us at the address below.`,
+              title: '6. Data Security',
+              body: `We implement reasonable measures to protect your data. However, no system is 100% secure.`,
             },
             {
               title: '7. Your Rights',
-              body: `Depending on your location, you may have the right to:
-
-• Access the personal information we hold about you
-• Correct inaccurate or incomplete information
-• Request deletion of your personal information
-• Opt out of marketing communications at any time
-• Data portability (receive your data in a portable format)
-
-To exercise any of these rights, please contact us using the information provided below.`,
+              body: `You may request:
+• Access to your data
+• Deletion of your data`,
             },
             {
-              title: '8. Children\'s Privacy',
-              body: `Our services are not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately and we will take steps to delete it.`,
+              title: '8. Third-Party Links',
+              body: `We are not responsible for external websites.`,
             },
             {
-              title: '9. Changes to This Policy',
-              body: `We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the "Last Updated" date below. Your continued use of our services after any changes constitutes your acceptance of the updated policy.`,
+              title: '9. Children\'s Privacy',
+              body: `Our services are not intended for children under 13.`,
             },
             {
-              title: '10. Contact Us',
-              body: `If you have any questions about this Privacy Policy or our privacy practices, please contact us at:\n\nMillionaire Traders Society\nEmail: info@millionairetraderssociety.com\nWebsite: millionairetraderssociety.com`,
+              title: '10. Changes',
+              body: `We may update this policy at any time. Continued use constitutes acceptance of the updated policy.`,
+            },
+            {
+              title: '11. Contact',
+              body: `For questions, contact:\n\nJessica@sayyes2jess.com`,
             },
           ].map(s => (
             <div key={s.title} style={{ marginBottom: 40 }}>
@@ -106,9 +96,9 @@ To exercise any of these rights, please contact us using the information provide
           ))}
 
           <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: 32, marginTop: 16 }}>
-            <p style={{ fontSize: 14, color: '#94a3b8', marginBottom: 24 }}>Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p style={{ fontSize: 14, color: '#94a3b8', marginBottom: 24 }}>Effective Date: March 25, 2026</p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <Link href="/terms" className="btn-outline" style={{ fontSize: 14, padding: '10px 20px' }}>Terms of Service</Link>
+              <Link href="/terms" className="btn-outline" style={{ fontSize: 14, padding: '10px 20px' }}>Terms &amp; Conditions</Link>
               <Link href="/disclaimer" className="btn-outline" style={{ fontSize: 14, padding: '10px 20px' }}>Disclaimer</Link>
               <Link href="/contact" className="btn-primary" style={{ fontSize: 14, padding: '10px 20px' }}>Questions? Contact Us</Link>
             </div>
