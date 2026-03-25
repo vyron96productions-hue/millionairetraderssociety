@@ -113,6 +113,8 @@ export default function HomePage() {
           alt="Millionaire Traders Society"
           fill
           priority
+          fetchPriority="high"
+          sizes="100vw"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
         {/* Gradient overlay — same dark tone as before, stronger on left */}
