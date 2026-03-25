@@ -56,6 +56,7 @@ export default function Nav() {
 
             <Link href="/about" className="nav-link" onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'About Coach Jess', destination: '/about', page_section: 'nav_desktop' })}>About Coach Jess</Link>
             <Link href="/team" className="nav-link" onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Meet the Team', destination: '/team', page_section: 'nav_desktop' })}>Meet the Team</Link>
+            <Link href="/trading4kidz" className="nav-link" style={{ color: '#289E54', fontWeight: 700 }} onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Trading4Kidz', destination: '/trading4kidz', page_section: 'nav_desktop' })}>Trading4Kidz</Link>
             <Link href="/contact" className="nav-link" onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'Contact', destination: '/contact', page_section: 'nav_desktop' })}>Contact</Link>
             <Link href="/free-course" className="btn-outline" style={{ marginLeft: 4, padding: '9px 18px', fontSize: 13 }} onClick={() => pushDataLayer({ event: 'cta_click', button_text: 'Free Course', destination: '/free-course', page_section: 'nav_desktop' })}>Free Course</Link>
             <Link href="/vip-course" className="btn-primary" style={{ marginLeft: 4, padding: '10px 20px', fontSize: 14 }} onClick={() => pushDataLayer({ event: 'cta_click', button_text: 'Join VIP', destination: '/vip-course', page_section: 'nav_desktop' })}>Join VIP</Link>
@@ -88,6 +89,7 @@ export default function Nav() {
             ))}
             <Link href="/about" className="dropdown-item" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: 'About Coach Jess', destination: '/about', page_section: 'nav_mobile' }) }}>About Coach Jess</Link>
             <Link href="/team" className="dropdown-item" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: 'Meet the Team', destination: '/team', page_section: 'nav_mobile' }) }}>Meet the Team</Link>
+            <Link href="/trading4kidz" className="dropdown-item" style={{ color: '#289E54', fontWeight: 700 }} onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: 'Trading4Kidz', destination: '/trading4kidz', page_section: 'nav_mobile' }) }}>Trading4Kidz</Link>
             <Link href="/contact" className="dropdown-item" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'nav_click', link_text: 'Contact', destination: '/contact', page_section: 'nav_mobile' }) }}>Contact</Link>
             <Link href="/free-course" className="btn-outline" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'cta_click', button_text: 'Get Free Course', destination: '/free-course', page_section: 'nav_mobile' }) }} style={{ marginTop: 12, justifyContent: 'center' }}>Get Free Course</Link>
             <Link href="/vip-course" className="btn-primary" onClick={() => { setMenuOpen(false); pushDataLayer({ event: 'cta_click', button_text: 'Join VIP', destination: '/vip-course', page_section: 'nav_mobile' }) }} style={{ marginTop: 8, justifyContent: 'center' }}>Join VIP →</Link>
