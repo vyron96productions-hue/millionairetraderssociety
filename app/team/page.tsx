@@ -79,7 +79,7 @@ export default function TeamPage() {
               alt="Millionaire Traders Society Team"
               width={900}
               height={600}
-              style={{ width: '100%', maxWidth: 700, height: 'auto', borderRadius: 24, boxShadow: '0 8px 40px rgba(0,0,0,0.12)', display: 'block' }}
+              style={{ width: '100%', maxWidth: 500, height: 'auto', borderRadius: 24, boxShadow: '0 8px 40px rgba(0,0,0,0.12)', display: 'block' }}
               priority
             />
           </div>
