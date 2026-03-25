@@ -72,6 +72,18 @@ export default function TeamPage() {
       {/* Team Grid */}
       <section style={{ padding: '88px 0', background: 'var(--light)' }}>
         <div className="container">
+          {/* Group photo */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 64 }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: 900, borderRadius: 24, overflow: 'hidden', boxShadow: '0 8px 40px rgba(0,0,0,0.12)', aspectRatio: '16/9' }}>
+              <Image
+                src="/Teampic.jpg"
+                alt="Millionaire Traders Society Team"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                priority
+              />
+            </div>
+          </div>
           <div className="team-grid">
             {TEAM.map(m => (
               <div key={m.name} style={{ background: '#fff', borderRadius: 24, overflow: 'hidden', border: '1px solid #e2e8f0', boxShadow: '0 2px 16px rgba(0,0,0,0.06)', display: 'flex', flexDirection: 'column' }}>
