@@ -124,11 +124,17 @@ export default function TeamPage() {
       <style>{`
         .team-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(6, 1fr);
           gap: 28px;
         }
+        .team-grid > * { grid-column: span 2; }
+        .team-grid > *:nth-child(4) { grid-column: 2 / 4; }
+        .team-grid > *:nth-child(5) { grid-column: 4 / 6; }
         @media (max-width: 960px) {
           .team-grid { grid-template-columns: repeat(2, 1fr); }
+          .team-grid > * { grid-column: span 1; }
+          .team-grid > *:nth-child(4) { grid-column: span 1; }
+          .team-grid > *:nth-child(5) { grid-column: span 1; }
         }
         @media (max-width: 600px) {
           .team-grid { grid-template-columns: 1fr; }
