@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import TrackedAnchor from '@/components/TrackedAnchor'
 import TrackedLink from '@/components/TrackedLink'
+import PageEventTracker from '@/components/PageEventTracker'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ const TEAM = [
 export default function TeamPage() {
   return (
     <div>
+      <PageEventTracker pageName="team" pageCategory="about" />
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #0D1117, #0a2a3a)', color: '#fff', padding: '80px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: -80, left: '50%', transform: 'translateX(-50%)', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(13,190,243,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />

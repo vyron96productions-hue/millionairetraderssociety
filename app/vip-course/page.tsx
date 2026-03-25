@@ -51,7 +51,7 @@ export default function VipCoursePage() {
                 ))}
               </div>
               <div style={{ marginTop: 28, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 24 }}>
-                <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>Choose a plan</p>
+                <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.65)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>Choose a plan</p>
                 <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                   {[
                     { label: 'Monthly', href: 'https://checkout.teachable.com/secure/180400/checkout/order_3yfbfqyk' },

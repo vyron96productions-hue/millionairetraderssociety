@@ -131,7 +131,7 @@ export default function Footer() {
 
           {/* Courses */}
           <div>
-            <h4 style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 16, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Courses</h4>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 16, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Courses</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {COURSES.map(c => (
                 <Link key={c.href} href={c.href} style={{ fontSize: 14, color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}
@@ -145,7 +145,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 16, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Company</h4>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 16, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Company</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {[
                 { label: 'About Coach Jess', href: '/about' },
@@ -163,7 +163,7 @@ export default function Footer() {
 
           {/* CTA */}
           <div>
-            <h4 style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 16, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Get Started</h4>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 16, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Get Started</p>
             <p style={{ fontSize: 13, color: '#94a3b8', marginBottom: 16, lineHeight: 1.6 }}>Start with our FREE beginner course — no credit card needed.</p>
             <Link href="/free-course" className="btn-primary" style={{ fontSize: 13, padding: '10px 20px' }}
               onClick={() => pushDataLayer({ event: 'cta_click', button_text: 'Get Free Course', destination: '/free-course', page_section: 'footer_cta' })}
@@ -172,18 +172,18 @@ export default function Footer() {
         </div>
 
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-          <p style={{ fontSize: 13, color: '#475569' }}>© {new Date().getFullYear()} Millionaire Traders Society. All rights reserved.</p>
+          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)' }}>© {new Date().getFullYear()} Millionaire Traders Society. All rights reserved.</p>
           <div style={{ display: 'flex', gap: 20 }}>
             {[{ label: 'Privacy Policy', href: '/privacy' }, { label: 'Terms of Service', href: '/terms' }, { label: 'Disclaimer', href: '/disclaimer' }].map(l => (
-              <Link key={l.href} href={l.href} style={{ fontSize: 12, color: '#475569', textDecoration: 'none' }}
+              <Link key={l.href} href={l.href} style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}
                 onClick={() => pushDataLayer({ event: 'nav_click', link_text: l.label, destination: l.href, page_section: 'footer_legal' })}
               >{l.label}</Link>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: '#334155' }}>Engineered By <a href="https://verdictiq.org" target="_blank" rel="noopener noreferrer" style={{ color: '#475569', textDecoration: 'none' }} onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'VerdictIQ', destination: 'https://verdictiq.org', page_section: 'footer_credit' })}>VerdictIQ</a></p>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>Engineered By <a href="https://verdictiq.org" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.55)', textDecoration: 'underline' }} onClick={() => pushDataLayer({ event: 'nav_click', link_text: 'VerdictIQ', destination: 'https://verdictiq.org', page_section: 'footer_credit' })}>VerdictIQ</a></p>
         </div>
 
-        <p style={{ fontSize: 11, color: '#334155', lineHeight: 1.6, textAlign: 'center', marginTop: 16 }}>
+        <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', lineHeight: 1.6, textAlign: 'center', marginTop: 16 }}>
           Trading involves substantial risk of loss. Past results are not indicative of future performance. All information provided is for educational purposes only and should not be construed as financial advice.
         </p>
       </div>

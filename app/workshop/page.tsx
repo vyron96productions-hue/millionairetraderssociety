@@ -51,7 +51,7 @@ export default function WorkshopPage() {
                 ))}
               </div>
               <div style={{ marginTop: 28, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 24 }}>
-                <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>Choose a plan</p>
+                <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.65)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>Choose a plan</p>
                 <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                   {[
                     { label: 'Monthly', href: 'https://checkout.teachable.com/secure/180400/checkout/order_1ng1g2nq' },
@@ -70,7 +70,7 @@ export default function WorkshopPage() {
 
             <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 24, padding: '36px 28px' }}>
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-                <Image src="/course-60day.png" alt="60-Day Trader Workshop" width={480} height={480} style={{ height: 'auto', width: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                <Image src="/course-60day.png" alt="60-Day Trader Workshop" width={480} height={480} sizes="(max-width: 768px) 100vw, 480px" style={{ height: 'auto', width: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
               </div>
               <h3 style={{ fontSize: 17, fontWeight: 800, color: 'var(--dark)', marginBottom: 20 }}>What You&apos;ll Get</h3>
               {[

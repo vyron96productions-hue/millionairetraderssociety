@@ -13,7 +13,7 @@ const COURSES = [
   {
     id: 'free',
     badge: 'FREE',
-    badgeColor: '#0a9ecc',
+    badgeColor: '#06648a',
     badgeBg: '#e0f7fe',
     title: 'Beginners Trading Course',
     price: 'Free',
@@ -36,7 +36,7 @@ const COURSES = [
   {
     id: 'workshop',
     badge: 'STOCK OPTIONS',
-    badgeColor: '#0a9ecc',
+    badgeColor: '#06648a',
     badgeBg: '#e0f7fe',
     title: '60-Day Trader Workshop',
     price: 'One-Time',
@@ -133,7 +133,7 @@ export default function CoursesPage() {
                   </div>
                 )}
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-                  <Image src={c.image} alt={c.title} width={320} height={280} style={{ height: 260, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                  <Image src={c.image} alt={c.title} width={320} height={280} sizes="(max-width: 768px) 100vw, 480px" style={{ height: 260, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
                   <span style={{ background: c.badgeBg, color: c.badgeColor, fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 50, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{c.badge}</span>

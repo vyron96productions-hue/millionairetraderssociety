@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import TrackedAnchor from '@/components/TrackedAnchor'
 import TrackedLink from '@/components/TrackedLink'
+import PageEventTracker from '@/components/PageEventTracker'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ const FEATURES = [
 export default function Trading4KidzPage() {
   return (
     <div>
+      <PageEventTracker pageName="trading4kidz" pageCategory="education" />
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #0D1117 0%, #0a2a3a 60%, #0d3320 100%)', color: '#fff', padding: '80px 0 64px', position: 'relative', overflow: 'hidden' }}>
         {/* Decorative blobs */}
