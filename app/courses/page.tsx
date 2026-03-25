@@ -112,7 +112,7 @@ export default function CoursesPage() {
     <div>
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #0D1117, #0a2a3a)', color: '#fff', padding: '72px 0 80px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: "url('/boxes1_expanded.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 60%', opacity: 0.18, maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 55%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 55%, transparent 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: "url('/boxes1_expanded.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 60%', opacity: 0.35, maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 70%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 70%, transparent 100%)' }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <span className="section-label" style={{ color: '#0DBEF3' }}>Trading Education</span>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 900, letterSpacing: '-1px', marginBottom: 16 }}>All Courses & Programs</h1>
