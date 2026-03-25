@@ -67,7 +67,7 @@ const COURSES = [
     href: '/bundle',
     accent: '#289E54',
     bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)',
-    image: '/course-bundle.png',
+    image: '/course-bundle.webp',
   },
 ]
 

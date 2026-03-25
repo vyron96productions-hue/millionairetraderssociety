@@ -103,7 +103,7 @@ const COURSES = [
     href: '/bundle',
     accent: '#289E54',
     highlight: false,
-    image: '/course-bundle.png',
+    image: '/course-bundle.webp',
   },
 ]
 

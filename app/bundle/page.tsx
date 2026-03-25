@@ -56,7 +56,7 @@ export default function BundlePage() {
 
             <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 24, padding: '36px 28px' }}>
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-                <Image src="/course-bundle.png" alt="VIP Bundle" width={480} height={480} style={{ height: 'auto', width: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                <Image src="/course-bundle.webp" alt="VIP Bundle" width={480} height={480} style={{ height: 'auto', width: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
               </div>
               <h3 style={{ fontSize: 17, fontWeight: 800, color: 'var(--dark)', marginBottom: 20 }}>Everything Included</h3>
               {[
