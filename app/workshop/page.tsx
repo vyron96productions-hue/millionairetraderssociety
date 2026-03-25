@@ -38,7 +38,7 @@ export default function WorkshopPage() {
                 60 days of structured stock options education. Go from curious to confident with a program designed to give you the tools, mindset, and analysis skills to trade on your own terms.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
-                <TrackedAnchor href="https://learnwithace.teachable.com/p/the-60-day-trader-workshop" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px', background: '#289E54', boxShadow: '0 4px 20px rgba(40,158,84,0.4)' }} tracking={{ event: 'cta_click', button_text: 'Join the Workshop →', destination: 'https://learnwithace.teachable.com/p/the-60-day-trader-workshop', page_section: 'hero' }}>
+                <TrackedAnchor href="https://checkout.teachable.com/secure/180400/checkout/order_1ng1g2nq" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px', background: '#289E54', boxShadow: '0 4px 20px rgba(40,158,84,0.4)' }} tracking={{ event: 'cta_click', button_text: 'Join the Workshop →', destination: 'https://checkout.teachable.com/secure/180400/checkout/order_1ng1g2nq', page_section: 'hero' }}>
                   Join the Workshop →
                 </TrackedAnchor>
                 <TrackedLink href="/courses" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', fontWeight: 700, fontSize: 15, padding: '15px 28px', borderRadius: 50, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }} tracking={{ event: 'cta_click', button_text: 'Compare All Courses', destination: '/courses', page_section: 'hero' }}>Compare All Courses</TrackedLink>

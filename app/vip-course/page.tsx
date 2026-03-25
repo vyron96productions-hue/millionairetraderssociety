@@ -38,7 +38,7 @@ export default function VipCoursePage() {
                 Advanced trading education for serious traders. Live webinars, curated trade ideas, private community access, and on-demand lessons across forex, futures, and crypto — all in one monthly subscription.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
-                <TrackedAnchor href="https://learnwithace.teachable.com/l/pdp/millionaire-traders-society" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px' }} tracking={{ event: 'cta_click', button_text: 'Join VIP →', destination: 'https://learnwithace.teachable.com/l/pdp/millionaire-traders-society', page_section: 'hero' }}>
+                <TrackedAnchor href="https://checkout.teachable.com/secure/180400/checkout/order_3yfbfqyk" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 16, padding: '15px 32px' }} tracking={{ event: 'cta_click', button_text: 'Join VIP →', destination: 'https://checkout.teachable.com/secure/180400/checkout/order_3yfbfqyk', page_section: 'hero' }}>
                   Join VIP →
                 </TrackedAnchor>
                 <TrackedLink href="/courses" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', fontWeight: 700, fontSize: 15, padding: '15px 28px', borderRadius: 50, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }} tracking={{ event: 'cta_click', button_text: 'Compare All Courses', destination: '/courses', page_section: 'hero' }}>Compare All Courses</TrackedLink>
