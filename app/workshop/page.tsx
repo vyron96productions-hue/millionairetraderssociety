@@ -50,6 +50,22 @@ export default function WorkshopPage() {
                   </div>
                 ))}
               </div>
+              <div style={{ marginTop: 28, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 24 }}>
+                <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>Choose a plan</p>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  {[
+                    { label: 'Monthly', href: 'https://checkout.teachable.com/secure/180400/checkout/order_1ng1g2nq' },
+                    { label: '3 Months', href: 'https://checkout.teachable.com/secure/180400/checkout/order_w0lgmxfy' },
+                    { label: '6 Months', href: 'https://checkout.teachable.com/secure/180400/checkout/order_23xx8hh0' },
+                    { label: 'Annual', href: 'https://checkout.teachable.com/secure/180400/checkout/order_7txh8njq' },
+                    { label: 'Lifetime', href: 'https://checkout.teachable.com/secure/180400/checkout/order_hsl41k8s' },
+                  ].map(plan => (
+                    <TrackedAnchor key={plan.label} href={plan.href} target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: 13, fontWeight: 600, padding: '9px 18px', borderRadius: 50, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', whiteSpace: 'nowrap' }} tracking={{ event: 'cta_click', button_text: plan.label, destination: plan.href, page_section: 'plan_selector' }}>
+                      {plan.label}
+                    </TrackedAnchor>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 24, padding: '36px 28px' }}>
