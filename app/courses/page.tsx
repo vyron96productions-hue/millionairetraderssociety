@@ -34,6 +34,29 @@ const COURSES = [
     image: '/course-free.jpg',
   },
   {
+    id: 'workshop',
+    badge: 'STOCK OPTIONS',
+    badgeColor: '#289E54',
+    badgeBg: '#e8f5e9',
+    title: '60-Day Trader Workshop',
+    price: 'One-Time',
+    priceNote: 'Stock options education program',
+    description: '60 days of structured stock options education. Live trading updates, trade reviews, weekly webinars, and live support access.',
+    features: [
+      'Live Trading & Trade Updates',
+      'Trade Reviews',
+      'Trade Ideas',
+      'Live Support Access',
+      'Engagement Encouraged',
+      'Weekly Webinars',
+    ],
+    cta: 'Join the Workshop →',
+    href: '/workshop',
+    accent: '#289E54',
+    highlight: false,
+    image: '/course-60day.png',
+  },
+  {
     id: 'vip',
     badge: 'MOST POPULAR',
     badgeColor: '#0a9ecc',
@@ -59,30 +82,6 @@ const COURSES = [
     image: '/course-vip.jpg',
   },
   {
-    id: 'workshop',
-    badge: 'STOCK OPTIONS',
-    badgeColor: '#289E54',
-    badgeBg: '#e8f5e9',
-    title: '60-Day Trader Workshop',
-    price: 'One-Time',
-    priceNote: 'Stock options education program',
-    description: '60 days of structured stock options education. Learn price action analysis, trade setup identification, and build confidence in your own analysis.',
-    features: [
-      'Stock options fundamentals',
-      'Price action analysis deep-dive',
-      'Identifying high-probability setups',
-      'Reading and interpreting charts',
-      'Building trade confidence',
-      'Dedicated support team',
-      'Continuing education included',
-    ],
-    cta: 'Join the Workshop →',
-    href: '/workshop',
-    accent: '#289E54',
-    highlight: false,
-    image: '/course-60day.png',
-  },
-  {
     id: 'bundle',
     badge: 'BEST VALUE',
     badgeColor: '#289E54',
@@ -94,7 +93,6 @@ const COURSES = [
     features: [
       'Everything in VIP Trading Course',
       '60-Day Trader Workshop included',
-      'Stock Options Bootcamp',
       'Full education vault access',
       'All live & recorded webinars',
       'Private community chat',
@@ -153,6 +151,11 @@ export default function CoursesPage() {
                     </li>
                   ))}
                 </ul>
+                {c.id === 'vip' && (
+                  <div style={{ background: '#fef9c3', border: '1px solid #fde047', borderRadius: 10, padding: '10px 14px', marginBottom: 16, fontSize: 13, fontWeight: 600, color: '#854d0e' }}>
+                    ⚠️ Please take the Free Course prior to joining.
+                  </div>
+                )}
                 {c.href.startsWith('http') ? (
                   <TrackedAnchor href={c.href} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: c.accent, color: '#fff', fontWeight: 700, fontSize: 15, padding: '14px 24px', borderRadius: 50, textDecoration: 'none', boxShadow: `0 4px 14px ${c.accent}33` }} tracking={{ event: 'cta_click', button_text: c.cta, destination: c.href, page_section: 'courses_section' }}>
                     {c.cta}

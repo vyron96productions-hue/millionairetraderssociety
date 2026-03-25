@@ -57,7 +57,7 @@ export default function FreeCourse() {
               </div>
               <h3 style={{ fontSize: 17, fontWeight: 800, color: 'var(--dark)', marginBottom: 20 }}>What You&apos;ll Get</h3>
               {[
-                { icon: '📊', text: '6 structured learning modules' },
+                { icon: '📊', text: 'Structured learning modules' },
                 { icon: '🎥', text: 'Video lessons with Coach Jess' },
                 { icon: '📖', text: 'Accompanying workbook & notes' },
                 { icon: '♾️', text: 'Lifetime access — learn at your pace' },

@@ -58,12 +58,12 @@ export default function WorkshopPage() {
               </div>
               <h3 style={{ fontSize: 17, fontWeight: 800, color: 'var(--dark)', marginBottom: 20 }}>What You&apos;ll Get</h3>
               {[
-                { icon: '📊', text: 'Stock options fundamentals' },
-                { icon: '📈', text: 'Price action analysis deep-dive' },
-                { icon: '🎯', text: 'High-probability setup identification' },
-                { icon: '📖', text: 'Chart reading & interpretation' },
-                { icon: '🧠', text: 'Trading psychology & confidence' },
-                { icon: '🤝', text: 'Dedicated support team' },
+                { icon: '📡', text: 'Live Trading & Trade Updates' },
+                { icon: '🔍', text: 'Trade Reviews' },
+                { icon: '💡', text: 'Trade Ideas' },
+                { icon: '🤝', text: 'Live Support Access' },
+                { icon: '👥', text: 'Engagement Encouraged' },
+                { icon: '🎥', text: 'Weekly Webinars' },
               ].map(i => (
                 <div key={i.text} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: '1px solid #f1f5f9', fontSize: 14, color: 'var(--dark)' }}>
                   <span style={{ fontSize: 20 }}>{i.icon}</span>
@@ -102,7 +102,7 @@ export default function WorkshopPage() {
               Get even more with the VIP Bundle
             </h2>
             <p style={{ fontSize: 17, opacity: 0.85, marginBottom: 32, maxWidth: 500, margin: '0 auto 32px', lineHeight: 1.7 }}>
-              The VIP Bundle includes this workshop plus the full VIP Trading Course, Stock Options Bootcamp, and the entire education vault.
+              The VIP Bundle includes this workshop plus the full VIP Trading Course and the entire education vault.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <TrackedLink href="/bundle" style={{ background: '#fff', color: '#289E54', fontWeight: 800, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none' }} tracking={{ event: 'cta_click', button_text: 'See VIP Bundle →', destination: '/bundle', page_section: 'upgrade_path' }}>See VIP Bundle →</TrackedLink>

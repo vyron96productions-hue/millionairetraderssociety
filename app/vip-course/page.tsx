@@ -56,6 +56,9 @@ export default function VipCoursePage() {
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
                 <Image src="/course-vip.jpg" alt="VIP Trading Course" width={480} height={480} style={{ height: 'auto', width: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
               </div>
+              <div style={{ background: '#fef9c3', border: '1px solid #fde047', borderRadius: 10, padding: '10px 14px', marginBottom: 16, fontSize: 13, fontWeight: 600, color: '#854d0e' }}>
+                ⚠️ Please take the Free Course prior to joining.
+              </div>
               <h3 style={{ fontSize: 17, fontWeight: 800, color: 'var(--dark)', marginBottom: 20 }}>What You&apos;ll Get</h3>
               {[
                 { icon: '📈', text: 'Forex, futures & crypto strategies' },
@@ -102,7 +105,7 @@ export default function VipCoursePage() {
               Want even more? Get the VIP Bundle.
             </h2>
             <p style={{ fontSize: 17, opacity: 0.85, marginBottom: 32, maxWidth: 500, margin: '0 auto 32px', lineHeight: 1.7 }}>
-              The VIP Bundle includes everything in VIP plus the 60-Day Workshop, Stock Options Bootcamp, and the full education vault.
+              The VIP Bundle includes everything in VIP plus the 60-Day Workshop and the full education vault.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <TrackedLink href="/bundle" style={{ background: '#fff', color: '#0DBEF3', fontWeight: 800, fontSize: 15, padding: '14px 32px', borderRadius: 50, textDecoration: 'none' }} tracking={{ event: 'cta_click', button_text: 'See VIP Bundle →', destination: '/bundle', page_section: 'upgrade_path' }}>See VIP Bundle →</TrackedLink>
