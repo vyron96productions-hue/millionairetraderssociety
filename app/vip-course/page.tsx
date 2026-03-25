@@ -59,7 +59,7 @@ export default function VipCoursePage() {
                     { label: 'Annual', href: 'https://checkout.teachable.com/secure/180400/checkout/order_0xmlz80d' },
                     { label: 'Lifetime', href: 'https://checkout.teachable.com/secure/180400/checkout/order_jsdcwn3x' },
                   ].map(plan => (
-                    <TrackedAnchor key={plan.label} href={plan.href} target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: 13, fontWeight: 600, padding: '9px 18px', borderRadius: 50, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', whiteSpace: 'nowrap' }} tracking={{ event: 'cta_click', button_text: plan.label, destination: plan.href, page_section: 'plan_selector' }}>
+                    <TrackedAnchor key={plan.label} href={plan.href} target="_blank" rel="noopener noreferrer" className="plan-btn" style={{ background: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: 13, fontWeight: 600, padding: '9px 18px', borderRadius: 50, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', whiteSpace: 'nowrap' }} tracking={{ event: 'cta_click', button_text: plan.label, destination: plan.href, page_section: 'plan_selector' }}>
                       {plan.label}
                     </TrackedAnchor>
                   ))}
@@ -129,6 +129,10 @@ export default function VipCoursePage() {
           </div>
         </div>
       </section>
+      <style>{`
+        .plan-btn { transition: background 0.18s, transform 0.18s, box-shadow 0.18s; }
+        .plan-btn:hover { background: rgba(255,255,255,0.18) !important; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
+      `}</style>
     </div>
   )
 }
