@@ -130,8 +130,8 @@ export default function VipCoursePage() {
         </div>
       </section>
       <style>{`
-        .plan-btn { transition: background 0.18s, transform 0.18s, box-shadow 0.18s; }
-        .plan-btn:hover { background: rgba(255,255,255,0.18) !important; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
+        .plan-btn { transition: background 0.18s, transform 0.18s, box-shadow 0.18s, border-color 0.18s; }
+        .plan-btn:hover { background: rgba(13,190,243,0.2) !important; border-color: #0DBEF3 !important; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(13,190,243,0.3); }
       `}</style>
     </div>
   )
