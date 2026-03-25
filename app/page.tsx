@@ -113,7 +113,6 @@ export default function HomePage() {
           alt="Millionaire Traders Society"
           fill
           priority
-          fetchPriority="high"
           sizes="100vw"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
