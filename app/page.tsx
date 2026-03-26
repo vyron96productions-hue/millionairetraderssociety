@@ -72,10 +72,10 @@ const COURSES = [
 ]
 
 const TESTIMONIALS = [
-  { name: 'Marcus T.', handle: '@marcust_trades', text: 'Coach Jess completely changed how I look at charts. Within 3 months of the VIP course I was consistently profitable.', stars: 5 },
-  { name: 'Danielle R.', handle: '@dramos_fx', text: 'I started with zero knowledge at 52 years old. Now I trade every morning before work. The free course alone is worth thousands.', stars: 5 },
+  { name: 'Ewelina M.', handle: 'MTS Student', text: 'For about six months I can honestly say my account is growing. The strategy is very well explained and our coaches are very helpful. If you show up every day, watch the lessons, and do the same thing every day, success is guaranteed. Cheers to the best school in the world!', stars: 5 },
+  { name: 'Karen Cummings', handle: 'MTS Student', text: 'Jess is by far the best educator I ever had in trading. Wish I had met her 5 years ago. She is extremely knowledgeable and really cares for her students success. After her 60 day program you will only yearn for more. Jess is hands down the best!!', stars: 5 },
+  { name: 'Kelly Ray', handle: 'MTS Student', text: 'Coach Jess and MTS Admins are the TRUTH! MTS has completely changed my life. The education is clear and simple. Making $30K and counting in two months is life changing. I\'ll always and forever recommend MTS to anyone wanting to learn how to trade any market.', stars: 5 },
   { name: 'Kevin S.', handle: '@kevs_trading', text: 'The VIP Bundle is the best investment I\'ve made. The live webinars and trade ideas keep me sharp every single week.', stars: 5 },
-  { name: 'Priya M.', handle: '@priya_fx', text: 'Finally a trading educator who speaks plainly. No fluff, no hype — just real strategies that work in today\'s market.', stars: 5 },
   { name: 'Jordan L.', handle: '@jordanltrades', text: 'The 60-Day Workshop gave me the structured foundation I needed. Coach Jess is patient, clear, and genuinely wants you to succeed.', stars: 5 },
   { name: 'Lisa W.', handle: '@lisawtrader', text: 'I was skeptical about online trading courses, but MTS is the real deal. The community alone is worth the subscription price.', stars: 5 },
 ]
