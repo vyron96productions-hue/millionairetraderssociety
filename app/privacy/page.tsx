@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import PageEventTracker from '@/components/PageEventTracker'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <div>
+      <PageEventTracker pageName="privacy" pageCategory="legal" />
       <section style={{ background: 'linear-gradient(135deg, #0D1117, #0a2a3a)', color: '#fff', padding: '72px 0 80px', textAlign: 'center' }}>
         <div className="container">
           <span className="section-label" style={{ color: '#0DBEF3' }}>Legal</span>

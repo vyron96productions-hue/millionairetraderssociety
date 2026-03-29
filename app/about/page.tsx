@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import TrackedLink from '@/components/TrackedLink'
 import TrackedAnchor from '@/components/TrackedAnchor'
+import PageEventTracker from '@/components/PageEventTracker'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ const MILESTONES = [
 export default function AboutPage() {
   return (
     <div>
+      <PageEventTracker pageName="about" pageCategory="about" />
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #0D1117, #0a2a3a)', color: '#fff', padding: '48px 0 52px', textAlign: 'center' }}>
         <div className="container">

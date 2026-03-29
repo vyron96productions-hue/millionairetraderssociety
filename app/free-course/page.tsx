@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import TrackedLink from '@/components/TrackedLink'
 import TrackedAnchor from '@/components/TrackedAnchor'
+import PageEventTracker from '@/components/PageEventTracker'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ const MODULES = [
 export default function FreeCourse() {
   return (
     <div>
+      <PageEventTracker pageName="free_course" pageCategory="courses" />
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #0D1117, #0a2a3a)', color: '#fff', padding: '80px 0', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: -60, right: -60, width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(13,190,243,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />

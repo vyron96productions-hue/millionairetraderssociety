@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '', company: '' })
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
@@ -61,6 +61,8 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+      {/* Honeypot — hidden from users, filled by bots */}
+      <input type="text" name="company" value={form.company} onChange={handleChange} style={{ display: 'none' }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
         <div>
           <label style={labelStyle}>Full Name *</label>

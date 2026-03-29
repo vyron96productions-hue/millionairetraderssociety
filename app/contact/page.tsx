@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
 import TrackedAnchor from '@/components/TrackedAnchor'
+import PageEventTracker from '@/components/PageEventTracker'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div>
+      <PageEventTracker pageName="contact" pageCategory="contact" />
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #0D1117, #0a2a3a)', color: '#fff', padding: '72px 0 80px', textAlign: 'center' }}>
         <div className="container">

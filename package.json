@@ -1,7 +1,6 @@
 {
   "name": "millionairetraderssociety",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,14 +23,16 @@
     ]
   },
   "dependencies": {
+    "next": "^15.5.14",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.1",
-    "next": "^15.5.14",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
     "typescript": "^6.0.2"
   }
 }

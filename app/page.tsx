@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import TrackedLink from '@/components/TrackedLink'
 import TrackedAnchor from '@/components/TrackedAnchor'
+import PageEventTracker from '@/components/PageEventTracker'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -104,6 +105,7 @@ function Stars({ count }: { count: number }) {
 export default function HomePage() {
   return (
     <div>
+      <PageEventTracker pageName="home" pageCategory="home" />
 
       {/* ── Hero ── */}
       <section style={{ position: 'relative', overflow: 'hidden', color: '#fff', minHeight: 620 }}>

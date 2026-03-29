@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import PageEventTracker from '@/components/PageEventTracker'
 
 export default function NotFound() {
   return (
     <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '64px 24px' }}>
+      <PageEventTracker pageName="404" pageCategory="error" />
       <div style={{ textAlign: 'center', maxWidth: 480 }}>
         <div style={{ fontSize: 72, fontWeight: 900, background: 'linear-gradient(90deg, #0DBEF3, #289E54)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', lineHeight: 1, marginBottom: 16 }}>404</div>
         <h1 style={{ fontSize: 28, fontWeight: 800, color: 'var(--dark)', marginBottom: 12 }}>Page Not Found</h1>
