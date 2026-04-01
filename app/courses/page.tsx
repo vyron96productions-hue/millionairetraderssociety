@@ -32,7 +32,7 @@ const COURSES = [
     href: '/free-course',
     accent: '#0DBEF3',
     highlight: false,
-    image: '/course-free_nobg.png',
+    image: '/course-free.png',
   },
   {
     id: 'workshop',
@@ -80,7 +80,7 @@ const COURSES = [
     href: '/vip-course',
     accent: '#289E54',
     highlight: true,
-    image: '/course-vip_nobg.png',
+    image: '/course-vip.png',
   },
   {
     id: 'bundle',

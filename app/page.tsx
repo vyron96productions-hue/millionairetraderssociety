@@ -29,7 +29,7 @@ const COURSES = [
     href: '/free-course',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
-    image: '/course-free_nobg.png',
+    image: '/course-free.png',
   },
   {
     badge: 'STOCK OPTIONS',
@@ -55,7 +55,7 @@ const COURSES = [
     href: '/vip-course',
     accent: '#289E54',
     bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)',
-    image: '/course-vip_nobg.png',
+    image: '/course-vip.png',
   },
   {
     badge: 'WORKBOOK',
