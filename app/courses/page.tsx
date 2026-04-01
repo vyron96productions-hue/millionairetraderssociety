@@ -55,7 +55,7 @@ const COURSES = [
     href: '/workshop',
     accent: '#0DBEF3',
     highlight: false,
-    image: '/course-60day.png',
+    image: '/mts%20mockups_so.png',
   },
   {
     id: 'vip',
@@ -81,6 +81,29 @@ const COURSES = [
     accent: '#289E54',
     highlight: true,
     image: '/course-vip.jpg',
+  },
+  {
+    id: 'workbook',
+    badge: 'WORKBOOK',
+    badgeColor: '#06648a',
+    badgeBg: '#e0f7fe',
+    title: 'The 60 Day Trader Workbook',
+    price: '$25',
+    priceNote: 'One-time purchase · Digital download',
+    description: 'A hands-on companion designed exclusively for MTS students. Bridge the gap between learning and execution with step-by-step exercises aligned with the 60-Day Trader Program.',
+    features: [
+      'Trade setup identification worksheets',
+      'Chart reading exercises',
+      'Trade planning templates',
+      'Daily trade journaling pages',
+      'Mindset & discipline sections',
+      'Progress tracking pages',
+    ],
+    cta: 'Get the Workbook →',
+    href: '/workbook',
+    accent: '#0DBEF3',
+    highlight: false,
+    image: '/mts%20mockups_workbook.png',
   },
   {
     id: 'bundle',
@@ -135,7 +158,7 @@ export default function CoursesPage() {
                   </div>
                 )}
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-                  <Image src={c.image} alt={c.title} width={320} height={280} sizes="(max-width: 768px) 100vw, 480px" style={{ height: 260, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                  <Image src={c.image} alt={c.title} width={320} height={280} sizes="(max-width: 768px) 100vw, 480px" style={{ height: 260, width: 'auto', objectFit: 'contain' }} />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
                   <span style={{ background: c.badgeBg, color: c.badgeColor, fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 50, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{c.badge}</span>

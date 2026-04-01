@@ -42,7 +42,7 @@ const COURSES = [
     href: '/workshop',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
-    image: '/course-60day.png',
+    image: '/mts%20mockups_so.png',
   },
   {
     badge: 'POPULAR',
@@ -56,6 +56,19 @@ const COURSES = [
     accent: '#289E54',
     bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)',
     image: '/course-vip.jpg',
+  },
+  {
+    badge: 'WORKBOOK',
+    badgeClass: 'badge-cyan',
+    title: 'The 60 Day Trader Workbook',
+    subtitle: 'Digital — One-Time $25',
+    description: 'A hands-on companion for 60-Day Workshop students. Bridge the gap between learning and execution with exercises aligned to the program.',
+    features: ['Trade setup worksheets', 'Chart reading exercises', 'Trade planning templates', 'Daily journaling pages', 'Mindset exercises', 'Progress tracking'],
+    cta: 'Get the Workbook →',
+    href: '/workbook',
+    accent: '#0DBEF3',
+    bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
+    image: '/mts%20mockups_workbook.png',
   },
   {
     badge: 'BEST VALUE',
@@ -108,34 +121,46 @@ export default function HomePage() {
       <PageEventTracker pageName="home" pageCategory="home" />
 
       {/* ── Hero ── */}
-      <section style={{ position: 'relative', overflow: 'hidden', color: '#fff', minHeight: 620 }}>
-        {/* Hero background image */}
-        <Image
-          src="/MillionaireTraderSocietyhero.png"
-          alt="Millionaire Traders Society"
-          fill
-          priority
-          sizes="100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-        />
-        {/* Gradient overlay — same dark tone as before, stronger on left */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(13,17,23,0.92) 0%, rgba(10,42,58,0.6) 55%, rgba(13,17,23,0.05) 100%)', zIndex: 1 }} />
+      <section style={{ position: 'relative', overflow: 'hidden', minHeight: 620, background: '#fff' }}>
+        {/* Branding image — left side, fades to white going right */}
+        <div style={{
+          position: 'absolute',
+          top: 0, left: 0, bottom: 0, width: '60%',
+          backgroundImage: "url('/IMG_7638.JPG')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          WebkitMaskImage: 'linear-gradient(90deg, black 0%, black 45%, transparent 85%, transparent 100%)',
+          maskImage: 'linear-gradient(90deg, black 0%, black 45%, transparent 85%, transparent 100%)',
+        }} />
+        {/* Hero trading image — right side, fades in from white */}
+        <div style={{
+          position: 'absolute',
+          top: 0, right: 0, bottom: 0, width: '65%',
+          backgroundImage: "url('/MillionaireTraderSocietyhero.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'right center',
+          WebkitMaskImage: 'linear-gradient(90deg, transparent 0%, transparent 10%, rgba(0,0,0,0.6) 35%, black 55%, black 100%)',
+          maskImage: 'linear-gradient(90deg, transparent 0%, transparent 10%, rgba(0,0,0,0.6) 35%, black 55%, black 100%)',
+          opacity: 0.85,
+        }} />
+        {/* Subtle light overlay over hero image area to keep it clean */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255,255,255,0.18) 55%, rgba(255,255,255,0.1) 100%)', zIndex: 1 }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 2, padding: '96px 24px 80px' }}>
           <div style={{ maxWidth: 620 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(13,190,243,0.12)', border: '1px solid rgba(13,190,243,0.25)', borderRadius: 50, padding: '6px 16px', marginBottom: 24 }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(13,190,243,0.12)', border: '1px solid rgba(13,190,243,0.3)', borderRadius: 50, padding: '6px 16px', marginBottom: 24 }}>
               <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#0DBEF3', display: 'inline-block' }} />
               <span style={{ fontSize: 13, fontWeight: 600, color: '#0DBEF3' }}>17,000+ Students and Counting</span>
             </div>
 
-            <h1 style={{ fontSize: 'clamp(38px, 6vw, 68px)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-1.5px', marginBottom: 20 }}>
+            <h1 style={{ fontSize: 'clamp(38px, 6vw, 68px)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-1.5px', marginBottom: 20, color: '#0D1117' }}>
               Learn to Trade.<br />
               <span style={{ background: 'linear-gradient(90deg, #0DBEF3, #289E54)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Build Real Wealth.
               </span>
             </h1>
 
-            <p style={{ fontSize: 'clamp(16px, 2.5vw, 20px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, marginBottom: 36, maxWidth: 540 }}>
+            <p style={{ fontSize: 'clamp(16px, 2.5vw, 20px)', color: '#475569', lineHeight: 1.7, marginBottom: 36, maxWidth: 540 }}>
               Coach Jessica Ramos has helped over 17,000 students master futures, forex, and stock options trading — from complete beginners to 7-figure traders.
             </p>
 
@@ -143,17 +168,17 @@ export default function HomePage() {
               <TrackedLink href="/free-course" className="btn-primary" style={{ fontSize: 16, padding: '16px 32px' }} tracking={{ event: 'cta_click', button_text: 'Start Free Today →', destination: '/free-course', page_section: 'hero' }}>
                 Start Free Today →
               </TrackedLink>
-              <TrackedLink href="/courses" className="btn-outline" style={{ fontSize: 16, padding: '16px 32px', borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }} tracking={{ event: 'cta_click', button_text: 'View All Courses', destination: '/courses', page_section: 'hero' }}>
+              <TrackedLink href="/courses" className="btn-outline" style={{ fontSize: 16, padding: '16px 32px' }} tracking={{ event: 'cta_click', button_text: 'View All Courses', destination: '/courses', page_section: 'hero' }}>
                 View All Courses
               </TrackedLink>
             </div>
 
             {/* Stats */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 40 }} className="stats-grid">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, borderTop: '1px solid rgba(13,17,23,0.1)', paddingTop: 40 }} className="stats-grid">
               {STATS.map(s => (
                 <div key={s.value} style={{ textAlign: 'left' }}>
                   <div style={{ fontSize: 'clamp(18px, 2.2vw, 28px)', fontWeight: 900, color: '#0DBEF3', lineHeight: 1, whiteSpace: 'nowrap' }}>{s.value}</div>
-                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 6, fontWeight: 500 }}>{s.label}</div>
+                  <div style={{ fontSize: 13, color: '#64748b', marginTop: 6, fontWeight: 500 }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -183,7 +208,7 @@ export default function HomePage() {
             {COURSES.map(c => (
               <div key={c.title} style={{ background: c.bg, borderRadius: 24, padding: '28px 28px 36px', display: 'flex', flexDirection: 'column', border: `1px solid ${c.accent}22` }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
-                  <Image src={c.image} alt={c.title} width={400} height={400} sizes="(max-width: 768px) 100vw, 480px" style={{ height: 360, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                  <Image src={c.image} alt={c.title} width={400} height={400} sizes="(max-width: 768px) 100vw, 480px" style={{ height: 360, width: 'auto', objectFit: 'contain' }} />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
                   <span className={`badge ${c.badgeClass}`}>{c.badge}</span>

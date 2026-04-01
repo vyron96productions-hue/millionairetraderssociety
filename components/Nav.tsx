@@ -9,6 +9,7 @@ const COURSES = [
   { label: 'VIP Trading Course', href: '/vip-course' },
   { label: '60-Day Trader Workshop', href: '/workshop' },
   { label: 'VIP Bundle', href: '/bundle' },
+  { label: '60 Day Trader Workbook', href: '/workbook' },
   { label: 'All Courses', href: '/courses' },
 ]
 
