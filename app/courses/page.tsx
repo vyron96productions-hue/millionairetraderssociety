@@ -55,7 +55,7 @@ const COURSES = [
     href: '/workshop',
     accent: '#0DBEF3',
     highlight: false,
-    image: '/mts%20mockups_so_nobg.png',
+    image: '/mts%20mockups_so.png',
   },
   {
     id: 'vip',
@@ -104,7 +104,7 @@ const COURSES = [
     href: '/bundle',
     accent: '#289E54',
     highlight: false,
-    image: '/mts%20mockups_bundle+_nobg.png',
+    image: '/mts%20mockups_bundle+.png',
   },
   {
     id: 'workbook',
@@ -127,7 +127,7 @@ const COURSES = [
     href: '/workbook',
     accent: '#0DBEF3',
     highlight: false,
-    image: '/mts%20mockups_workbook_nobg.png',
+    image: '/mts%20mockups_workbook.png',
   },
 ]
 

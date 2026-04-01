@@ -42,7 +42,7 @@ const COURSES = [
     href: '/workshop',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
-    image: '/mts%20mockups_so_nobg.png',
+    image: '/mts%20mockups_so.png',
   },
   {
     badge: 'POPULAR',
@@ -68,7 +68,7 @@ const COURSES = [
     href: '/workbook',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
-    image: '/mts%20mockups_workbook_nobg.png',
+    image: '/mts%20mockups_workbook.png',
   },
   {
     badge: 'BEST VALUE',
@@ -81,7 +81,7 @@ const COURSES = [
     href: '/bundle',
     accent: '#289E54',
     bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)',
-    image: '/mts%20mockups_bundle+_nobg.png',
+    image: '/mts%20mockups_bundle+.png',
   },
 ]
 
