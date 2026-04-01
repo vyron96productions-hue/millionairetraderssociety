@@ -104,7 +104,7 @@ const COURSES = [
     href: '/bundle',
     accent: '#289E54',
     highlight: false,
-    image: '/mts%20mockups_bundle+.png',
+    image: '/mts%20mockups_bundle.png',
   },
   {
     id: 'workbook',
