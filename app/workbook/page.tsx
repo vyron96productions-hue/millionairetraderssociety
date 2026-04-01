@@ -81,7 +81,7 @@ export default function WorkbookPage() {
             <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 24, padding: '36px 28px' }}>
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
                 <Image
-                  src="/mts%20mockups_workbook.png"
+                  src="/mts%20mockups_workbook_nobg.png"
                   alt="The 60 Day Trader Workbook"
                   width={480}
                   height={480}

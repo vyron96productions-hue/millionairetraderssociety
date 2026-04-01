@@ -29,7 +29,7 @@ const COURSES = [
     href: '/free-course',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
-    image: '/course-free.jpg',
+    image: '/course-free_nobg.png',
   },
   {
     badge: 'STOCK OPTIONS',
@@ -42,7 +42,7 @@ const COURSES = [
     href: '/workshop',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
-    image: '/mts%20mockups_so.png',
+    image: '/mts%20mockups_so_nobg.png',
   },
   {
     badge: 'POPULAR',
@@ -55,7 +55,7 @@ const COURSES = [
     href: '/vip-course',
     accent: '#289E54',
     bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)',
-    image: '/course-vip.jpg',
+    image: '/course-vip_nobg.png',
   },
   {
     badge: 'WORKBOOK',
@@ -68,7 +68,7 @@ const COURSES = [
     href: '/workbook',
     accent: '#0DBEF3',
     bg: 'linear-gradient(135deg, #e0f7fe, #b3ecfb)',
-    image: '/mts%20mockups_workbook.png',
+    image: '/mts%20mockups_workbook_nobg.png',
   },
   {
     badge: 'BEST VALUE',
@@ -81,7 +81,7 @@ const COURSES = [
     href: '/bundle',
     accent: '#289E54',
     bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)',
-    image: '/course-bundle.webp',
+    image: '/mts%20mockups_bundle+_nobg.png',
   },
 ]
 

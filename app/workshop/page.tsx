@@ -72,7 +72,7 @@ export default function WorkshopPage() {
 
             <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 24, padding: '36px 28px' }}>
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-                <Image src="/mts%20mockups_so.png" alt="60-Day Trader Workshop" width={480} height={480} sizes="(max-width: 768px) 100vw, 480px" style={{ height: 'auto', width: '100%', objectFit: 'contain' }} />
+                <Image src="/mts%20mockups_so_nobg.png" alt="60-Day Trader Workshop" width={480} height={480} sizes="(max-width: 768px) 100vw, 480px" style={{ height: 'auto', width: '100%', objectFit: 'contain' }} />
               </div>
               <h3 style={{ fontSize: 17, fontWeight: 800, color: 'var(--dark)', marginBottom: 20 }}>What You&apos;ll Get</h3>
               {[

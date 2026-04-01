@@ -32,7 +32,7 @@ const COURSES = [
     href: '/free-course',
     accent: '#0DBEF3',
     highlight: false,
-    image: '/course-free.jpg',
+    image: '/course-free_nobg.png',
   },
   {
     id: 'workshop',
@@ -55,7 +55,7 @@ const COURSES = [
     href: '/workshop',
     accent: '#0DBEF3',
     highlight: false,
-    image: '/mts%20mockups_so.png',
+    image: '/mts%20mockups_so_nobg.png',
   },
   {
     id: 'vip',
@@ -80,30 +80,7 @@ const COURSES = [
     href: '/vip-course',
     accent: '#289E54',
     highlight: true,
-    image: '/course-vip.jpg',
-  },
-  {
-    id: 'workbook',
-    badge: 'WORKBOOK',
-    badgeColor: '#06648a',
-    badgeBg: '#e0f7fe',
-    title: 'The 60 Day Trader Workbook',
-    price: '$25',
-    priceNote: 'One-time purchase · Digital download',
-    description: 'A hands-on companion designed exclusively for MTS students. Bridge the gap between learning and execution with step-by-step exercises aligned with the 60-Day Trader Program.',
-    features: [
-      'Trade setup identification worksheets',
-      'Chart reading exercises',
-      'Trade planning templates',
-      'Daily trade journaling pages',
-      'Mindset & discipline sections',
-      'Progress tracking pages',
-    ],
-    cta: 'Get the Workbook →',
-    href: '/workbook',
-    accent: '#0DBEF3',
-    highlight: false,
-    image: '/mts%20mockups_workbook.png',
+    image: '/course-vip_nobg.png',
   },
   {
     id: 'bundle',
@@ -127,7 +104,30 @@ const COURSES = [
     href: '/bundle',
     accent: '#289E54',
     highlight: false,
-    image: '/course-bundle.webp',
+    image: '/mts%20mockups_bundle+_nobg.png',
+  },
+  {
+    id: 'workbook',
+    badge: 'WORKBOOK',
+    badgeColor: '#06648a',
+    badgeBg: '#e0f7fe',
+    title: 'The 60 Day Trader Workbook',
+    price: '$25',
+    priceNote: 'One-time purchase · Digital download',
+    description: 'A hands-on companion designed exclusively for MTS students. Bridge the gap between learning and execution with step-by-step exercises aligned with the 60-Day Trader Program.',
+    features: [
+      'Trade setup identification worksheets',
+      'Chart reading exercises',
+      'Trade planning templates',
+      'Daily trade journaling pages',
+      'Mindset & discipline sections',
+      'Progress tracking pages',
+    ],
+    cta: 'Get the Workbook →',
+    href: '/workbook',
+    accent: '#0DBEF3',
+    highlight: false,
+    image: '/mts%20mockups_workbook_nobg.png',
   },
 ]
 
@@ -151,7 +151,7 @@ export default function CoursesPage() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 28 }} className="courses-two-grid">
             {COURSES.map(c => (
-              <div key={c.id} id={c.id} style={{ background: '#fff', borderRadius: 24, padding: '36px 32px', border: c.highlight ? `2px solid ${c.accent}` : '1px solid #e2e8f0', position: 'relative', boxShadow: c.highlight ? `0 8px 32px ${c.accent}22` : 'none', display: 'flex', flexDirection: 'column' }}>
+              <div key={c.id} id={c.id} style={{ background: '#fff', borderRadius: 24, padding: '36px 32px', border: c.highlight ? `2px solid ${c.accent}` : '1px solid #e2e8f0', position: 'relative', boxShadow: c.highlight ? `0 8px 32px ${c.accent}22` : 'none', display: 'flex', flexDirection: 'column', ...(c.id === 'workbook' ? { gridColumn: '1 / -1', maxWidth: 560, margin: '0 auto', width: '100%' } : {}) }}>
                 {c.highlight && (
                   <div style={{ position: 'absolute', top: -14, left: '50%', transform: 'translateX(-50%)', background: c.accent, color: '#fff', fontSize: 11, fontWeight: 800, padding: '4px 16px', borderRadius: 50, letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
                     ★ Most Popular
